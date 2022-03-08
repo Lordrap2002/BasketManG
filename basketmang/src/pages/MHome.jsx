@@ -1,11 +1,19 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
-function MHome(){
+function MHome(props){
 	return(
 		<div>
-			Home
+			<div>Home</div>
+			<div>{props.text}</div>
 		</div>
 	)
 }
 
-export default MHome;
+const mapStateToProps = (state) => {
+	return {
+		text: state.uiReducer.text
+	};
+}
+
+export default connect(mapStateToProps)(MHome);

@@ -6,10 +6,22 @@
     color: white;
     font-size: x-large;
     font-weight: bold;
+    text-decoration: none;
+
     
 }
 
 .myButton1:hover{
     color: rgb(147, 226, 147);
     cursor: pointer;
+}
+
+.myButton1-text{
+    color: white;
+    text-decoration: none;
+    
+}
+
+.myButton1-text:hover{
+    color: rgb(66, 80, 209);
 }

@@ -9,8 +9,8 @@ function MHeaderBar(props){
 	return(
 		<nav className="mystyle">
 			<div className="innerContainer">
-				<MButton buttonName="PÁGINA PRINCIPAL"/>
-				<MButton buttonName="NOTICIAS"/>
+				<MButton buttonName="PÁGINA PRINCIPAL" to='/'/>
+				<MButton buttonName="NOTICIAS" to='/about'/>
 				<MButton buttonName="COMUNIDAD"/>
 				<MButton buttonName="ESTADÍSTICAS"/>
 			</div>

@@ -4,6 +4,7 @@ import MHeaderBar from './components/MHeaderBar';
 import MBox from './components/MBox';
 import {Routes, Route} from 'react-router-dom';
 import MHome from './pages/MHome';
+import MAbout from './pages/MAbout';
 
 function App(props){
 	const [showLogin, setShowLogin] = useState(false);
@@ -16,14 +17,15 @@ function App(props){
 			<MHeaderBar onHeaderBarLoginClicked={() => {onLoginButtonClicked();}}/>
 			<Routes>
 				<Route exact path='/' element={<MHome/>}/>
+				<Route exact path='/about' element={<MAbout/>}/>
 			</Routes>
-			{showLogin ?
+			{/*showLogin ?
 				<div className='login'>
 					<MBox/>
 				</div>
 				:
 				null
-			}
+			*/}
 		</div>
 	);
 }
