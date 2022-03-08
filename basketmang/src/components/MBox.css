@@ -1,0 +1,19 @@
+.mistyle{
+    width: 20%;
+    background-color: darkgreen;
+    display: inline-flexbox;
+    justify-content: baseline;
+    height: 222px;
+}
+
+.inerContainer{
+    background-color: darkgreen;
+    height: 30px;
+    width: 100%;
+}
+
+.botContainer{
+    background-color: lightgreen;
+    height: 70px;
+    width: 100%;
+}
