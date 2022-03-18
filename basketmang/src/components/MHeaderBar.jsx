@@ -15,10 +15,12 @@ function MHeaderBar(props){
 				<MButton buttonName="ESTADÍSTICAS"/>
 			</div>
 			<div className="leftContainer">
-				<MButton buttonName="LOG IN" onButtonClicked={() => {onHeaderBarLoginClicked();}}/>
+				<MButton buttonName="LOG IN"/> 
 			</div>
 		</nav>
 	);
 }
 
 export default MHeaderBar;
+
+//onButtonClicked={() => {onHeaderBarLoginClicked();}}

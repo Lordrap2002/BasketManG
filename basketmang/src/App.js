@@ -5,6 +5,8 @@ import MBox from './components/MBox';
 import {Routes, Route} from 'react-router-dom';
 import MHome from './pages/MHome';
 import MAbout from './pages/MAbout';
+import MloginRegister from './components/MBox';
+import {connect} from "react-redux";
 
 function App(props){
 	const [showLogin, setShowLogin] = useState(false);
@@ -14,20 +16,28 @@ function App(props){
 	}
 	return(
 		<div className="App">
-			<MHeaderBar onHeaderBarLoginClicked={() => {onLoginButtonClicked();}}/>
+			<MHeaderBar/>
 			<Routes>
 				<Route exact path='/' element={<MHome/>}/>
 				<Route exact path='/about' element={<MAbout/>}/>
 			</Routes>
-			{/*showLogin ?
+			{props.showLogin ?
 				<div className='login'>
 					<MBox/>
 				</div>
 				:
 				null
-			*/}
+			}
 		</div>
 	);
 }
 
-export default App;
+const mapStatesToProps = (state) => {
+	return{
+		showLogin: state.uiReducer.showLogin
+	};
+}
+
+export default connect(mapStatesToProps)(App);
+
+//onHeaderBarLoginClicked={() => {onLoginButtonClicked();}}

@@ -1,10 +1,14 @@
 import {useEffect, useState} from "react";
 import './MButton.css';
 import {Link} from "react-router-dom";
+import {setShowLogin} from "../store/actions/ui";
+import {connect} from "react-redux";
 
 function Mbutton(props){
   function onButtonClicked(){
-    props.onButtonClicked();
+    console.log(props);
+    props.setShowLogin(props);
+    //props.onButtonClicked();
   }
   return(
     <button className='myButton1' onClick={() => {onButtonClicked();}}>
@@ -27,4 +31,8 @@ function Mbutton(props){
   );
 }
 
-export default Mbutton;
+const mapActionsToProps = {
+  setShowLogin
+};
+
+export default connect(null, mapActionsToProps)(Mbutton);
