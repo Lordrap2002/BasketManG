@@ -22,3 +22,8 @@
     width: 40%;
     margin-right: 2%;
 }
+
+.mHeaderBar-logo {
+    height: auto;
+    width: auto;
+  }

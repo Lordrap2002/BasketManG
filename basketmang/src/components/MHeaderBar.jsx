@@ -9,18 +9,18 @@ function MHeaderBar(props){
 	return(
 		<nav className="mystyle">
 			<div className="innerContainer">
-				<MButton buttonName="PÁGINA PRINCIPAL" to='/'/>
-				<MButton buttonName="NOTICIAS" to='/about'/>
-				<MButton buttonName="COMUNIDAD"/>
+				<MButton buttonName="MENU PRINCIPAL" to='/'/>
+				<MButton buttonName="TIENDA" to='/about'/>
+				<MButton buttonName="MI EQUIPO"/>
 				<MButton buttonName="ESTADÍSTICAS"/>
 			</div>
 			<div className="leftContainer">
-				<MButton buttonName="LOG IN"/> 
+				<MButton buttonName="LOG IN"/>
+				<MButton buttonName="CONFIGURACIÓN"/>
 			</div>
 		</nav>
 	);
 }
-
 export default MHeaderBar;
 
 //onButtonClicked={() => {onHeaderBarLoginClicked();}}

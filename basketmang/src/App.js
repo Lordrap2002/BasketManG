@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
 import MHeaderBar from './components/MHeaderBar';
+import MMenuButton from './components/MMenuButton';
 import MBox from './components/MBox';
 import {Routes, Route} from 'react-router-dom';
 import MHome from './pages/MHome';
@@ -17,6 +18,7 @@ function App(props){
 	return(
 		<div className="App">
 			<MHeaderBar/>
+			<MMenuButton buttonName="¿Necesitas ayuda?"/>
 			<Routes>
 				<Route exact path='/' element={<MHome/>}/>
 				<Route exact path='/about' element={<MAbout/>}/>

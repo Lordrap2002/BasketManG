@@ -1,0 +1,25 @@
+.myButton2{
+    background-color: transparent;
+    border-radius: 10px;
+    border: 0;
+    box-shadow: none;
+    color: green;
+    font-size: x-large;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.myButton2:hover{
+    color: rgb(147, 226, 147);
+    cursor: pointer;
+}
+
+.myButton2-text{
+    color: white;
+    text-decoration: none;
+    
+}
+
+.myButton2-text:hover{
+    color: rgb(66, 80, 209);
+}
