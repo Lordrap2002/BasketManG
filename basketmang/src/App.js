@@ -5,23 +5,17 @@ import MMenuButton from './components/MMenuButton';
 import MBox from './components/MBox';
 import {Routes, Route} from 'react-router-dom';
 import MHome from './pages/MHome';
-import MAbout from './pages/MAbout';
-import MloginRegister from './components/MBox';
+import MTienda from './pages/MTienda';
 import {connect} from "react-redux";
 
 function App(props){
-	const [showLogin, setShowLogin] = useState(false);
-	function onLoginButtonClicked(){
-		const newShowLogin = !showLogin;
-		setShowLogin(newShowLogin);
-	}
 	return(
 		<div className="App">
 			<MHeaderBar/>
 			<MMenuButton buttonName="¿Necesitas ayuda?"/>
 			<Routes>
 				<Route exact path='/' element={<MHome/>}/>
-				<Route exact path='/about' element={<MAbout/>}/>
+				<Route exact path='/tienda' element={<MTienda/>}/>
 			</Routes>
 			{props.showLogin ?
 				<div className='login'>
@@ -42,4 +36,9 @@ const mapStatesToProps = (state) => {
 
 export default connect(mapStatesToProps)(App);
 
-//onHeaderBarLoginClicked={() => {onLoginButtonClicked();}}
+/*onHeaderBarLoginClicked={() => {onLoginButtonClicked();}}
+const [showLogin, setShowLogin] = useState(false);
+function onLoginButtonClicked(){
+	const newShowLogin = !showLogin;
+	setShowLogin(newShowLogin);
+}*/

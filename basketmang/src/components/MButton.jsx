@@ -1,17 +1,12 @@
-import {useEffect, useState} from "react";
 import './MButton.css';
 import {Link} from "react-router-dom";
-import {setShowLogin} from "../store/actions/ui";
 import {connect} from "react-redux";
 
-function Mbutton(props){
-  function onButtonClicked(){
-    console.log(props);
-    props.setShowLogin(props);
-    //props.onButtonClicked();
+function MButton(props){
+  function onButtonClick(){
   }
   return(
-    <button className='myButton1' onClick={() => {onButtonClicked();}}>
+    <button className='myButton1' onClick={() => {onButtonClick();}}>
       { props.href ?
         <a
           className='myButton-text'
@@ -31,8 +26,4 @@ function Mbutton(props){
   );
 }
 
-const mapActionsToProps = {
-  setShowLogin
-};
-
-export default connect(null, mapActionsToProps)(Mbutton);
+export default MButton;

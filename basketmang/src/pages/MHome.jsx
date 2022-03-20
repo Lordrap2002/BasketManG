@@ -5,7 +5,7 @@ function MHome(props){
 	return(
 		<div>
 			<div>Home</div>
-			<div>{props.text}</div>
+			{/*<div>{props.text}</div>*/}
 		</div>
 	)
 }

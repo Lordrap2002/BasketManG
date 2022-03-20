@@ -1,12 +1,14 @@
-import './MMenuButton.css';
+import './MLoginButton.css';
 import {Link} from "react-router-dom";
+import {setShowLogin} from "../store/actions/ui";
 import {connect} from "react-redux";
 
-function MMenuButton(props){
+function MLoginButton(props){
   function onButtonClick(){
+    props.setShowLogin(!props.showLogin);
   }
   return(
-    <button className='myButton2' onClick={() => {onButtonClick();}}>
+    <button className='myButton3' onClick={() => {onButtonClick();}}>
       { props.href ?
         <a
           className='myButton-text'
@@ -26,8 +28,14 @@ function MMenuButton(props){
   );
 }
 
-/*const mapActionsToProps = {
+const mapActionsToProps = {
   setShowLogin
-};*/
+};
 
-export default /*connect(null, mapActionsToProps)*/(MMenuButton);
+const mapStatesToProps = (state) => {
+	return{
+		showLogin: state.uiReducer.showLogin
+	};
+}
+
+export default connect(mapStatesToProps, mapActionsToProps)(MLoginButton);

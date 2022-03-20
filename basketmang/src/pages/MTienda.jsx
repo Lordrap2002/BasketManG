@@ -1,11 +1,11 @@
 import React from 'react';
 
-function MAbout(){
+function MTienda(){
 	return(
 		<div>
-			About
+			Tienda
 		</div>
 	)
 }
 
-export default MAbout;
+export default MTienda;

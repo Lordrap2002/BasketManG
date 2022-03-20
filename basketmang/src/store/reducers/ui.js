@@ -9,7 +9,7 @@ const uiReducer = (state = INITIAL_STATE, action) => {
         case "SET_SHOW_LOGIN":
             return{
                 ...state,
-                showLogin: action.payload.showLogin
+                showLogin: action.payload.showLogin,
             };    
         default:
             return state;
