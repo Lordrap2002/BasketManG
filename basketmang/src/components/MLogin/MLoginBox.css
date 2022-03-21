@@ -1,4 +1,4 @@
-.mistyle{
+.loginmistyle{
     width: 20%;
     background-color: darkgreen;
     display: inline-flexbox;
@@ -6,13 +6,13 @@
     height: 222px;
 }
 
-.inerContainer{
+.logininerContainer{
     background-color: darkgreen;
     height: 30px;
     width: 100%;
 }
 
-.botContainer{
+.loginbotContainer{
     background-color: lightgreen;
     height: 70px;
     width: 100%;

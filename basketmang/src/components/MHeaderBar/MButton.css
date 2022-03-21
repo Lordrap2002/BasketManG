@@ -1,4 +1,4 @@
-.myButton1{
+.hmyButton1{
     background-color: transparent;
     border-radius: 10px;
     border: 0;
@@ -9,17 +9,14 @@
     text-decoration: none;
 }
 
-.myButton1:hover{
+.hmyButton1:hover{
     color: rgb(147, 226, 147);
     cursor: pointer;
 }
 
-.myButton1-text{
+.hmyButton1-text{
     color: white;
     text-decoration: none;
     
 }
 
-.myButton1-text:hover{
-    color: rgb(66, 80, 209);
-}

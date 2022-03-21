@@ -1,6 +1,6 @@
 import './MLoginButton.css';
 import {Link} from "react-router-dom";
-import {setShowLogin} from "../store/actions/ui";
+import {setShowLogin} from "../../store/actions/ui";
 import {connect} from "react-redux";
 
 function MLoginButton(props){

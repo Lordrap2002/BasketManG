@@ -1,0 +1,11 @@
+.tstyle{
+    align-items: stretch;
+    display: inline-flexbox;
+    display: flex;
+    flex-direction: column;
+}
+
+.tbottom{
+    display: flex;
+    justify-content: space-between;
+}

@@ -6,19 +6,19 @@ function MButton(props){
   function onButtonClick(){
   }
   return(
-    <button className='myButton1' onClick={() => {onButtonClick();}}>
+    <button className='hmyButton1' onClick={() => {onButtonClick();}}>
       { props.href ?
         <a
-          className='myButton-text'
+          className='hmyButton-text'
           href={props.href}>
           {props.buttonName}
         </a>
         : props.to ?
-        <Link to={props.to} className='myButton-text'>
+        <Link to={props.to} className='hmyButton-text'>
           {props.buttonName}
         </Link>
         :
-        <span className='myButton-text'>
+        <span className='hmyButton-text'>
           {props.buttonName}
         </span>
       }

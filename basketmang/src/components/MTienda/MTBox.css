@@ -1,0 +1,26 @@
+.ttbox{
+    width: 40%;
+    display: inline-flexbox;
+    justify-content: baseline;
+    height: 350px;
+    justify-self: flex-end;
+	border: 5px solid #000;
+    margin-right: 10px;
+}
+
+.tttitle{
+    background-color: rgb(5, 82, 5);
+    height: 50px;
+    width: 100%;
+    font-size: 30px;
+    justify-content: baseline;
+    display: center;
+    justify-content: space-between;
+    color: black;
+}
+
+.ttitems{
+    background-color: rgb(0, 116, 0);
+    height: 290px;
+    width: 100%;
+}
