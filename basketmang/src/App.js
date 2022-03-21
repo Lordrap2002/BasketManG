@@ -16,6 +16,7 @@ function App(props){
 				<Route exact path='/' element={<MHome/>}/>
 				<Route exact path='/tienda' element={<MTienda/>}/>
 				<Route exact path='/help' element={<MHelp/>}/>
+				<Route exact path='/help' element={<MSettings>}/>
 			</Routes>
 			{props.showLogin ?
 				<div className='login'>
