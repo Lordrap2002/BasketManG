@@ -5,6 +5,7 @@ import MLoginBox from './components/MLogin/MLoginBox';
 import {Routes, Route} from 'react-router-dom';
 import MHome from './pages/MHome';
 import MTienda from './pages/MTienda';
+import MHelp from './pages/MHelp';
 import {connect} from "react-redux";
 
 function App(props){
@@ -14,6 +15,7 @@ function App(props){
 			<Routes>
 				<Route exact path='/' element={<MHome/>}/>
 				<Route exact path='/tienda' element={<MTienda/>}/>
+				<Route exact path='/help' element={<MHelp/>}/>
 			</Routes>
 			{props.showLogin ?
 				<div className='login'>

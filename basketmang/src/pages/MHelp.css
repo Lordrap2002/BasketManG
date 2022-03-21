@@ -1,0 +1,10 @@
+.hstyle{
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+}
+
+.hbottom{
+    display: flex;
+    justify-content: space-between;
+}

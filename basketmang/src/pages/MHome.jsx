@@ -7,7 +7,7 @@ function MHome(props){
 		<div>
 			<div>Home</div>
 			{/*<div>{props.text}</div>*/}		
-			<MMenuButton buttonName="¿Necesitas ayuda?"/>
+			<MMenuButton buttonName="¿Necesitas ayuda?" to='/help'/>
 		</div>
 	)
 }
