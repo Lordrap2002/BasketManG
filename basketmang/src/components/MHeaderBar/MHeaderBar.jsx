@@ -8,8 +8,8 @@ function MHeaderBar(props){
 			<div className="innerContainer">
 				<MButton buttonName="MENU PRINCIPAL" to='/'/>
 				<MButton buttonName="TIENDA" to='/tienda'/>
-				<MButton buttonName="MI EQUIPO"/>
-				<MButton buttonName="ESTADÍSTICAS"/>
+				<MButton buttonName="MI EQUIPO" to='/miEquipo'/>
+				<MButton buttonName="ESTADÍSTICAS" to='/estadisticas'/>
 			</div>
 			<div className="leftContainer">
 				<MLoginButton buttonName="LOG IN"/>

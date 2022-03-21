@@ -1,0 +1,31 @@
+.tJBbox{
+    width: 40%;
+    display: inline-flexbox;
+    justify-content: baseline;
+    height: 460PX;
+	border: 5px solid #000;
+    margin-right: 10px;
+    position: relative;
+    top: 300px;
+    right: 1200px;
+}
+
+.tJBtitle{
+    background-color: rgb(5, 82, 5);
+    height: 50px;
+    width: 70%;
+    font-size: 30px;
+    display: center;
+    justify-content: space-between;
+    color: black;
+}
+
+.tJBitems{
+    background-color: rgb(0, 116, 0);
+    height: 400px;
+    width: 70%;
+    flex-wrap: wrap;
+    display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+}
