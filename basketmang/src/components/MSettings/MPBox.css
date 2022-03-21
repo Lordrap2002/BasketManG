@@ -1,0 +1,26 @@
+.spbox{
+    width: 30%;
+    display: inline-flexbox;
+    justify-content: baseline;
+    height: 430px;
+    justify-self: flex-end;
+	border: 5px solid #000;
+    margin-right: 100px;
+}
+
+.sptitle{
+    background-color: rgb(5, 82, 5);
+    height: 50px;
+    width: 100%;
+    font-size: 30px;
+    justify-content: baseline;
+    display: center;
+    justify-content: space-between;
+    color: black;
+}
+
+.spitems{
+    background-color: rgb(0, 116, 0);
+    height: 370px;
+    width: 100%;
+}

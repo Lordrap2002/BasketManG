@@ -13,7 +13,7 @@ function MHeaderBar(props){
 			</div>
 			<div className="leftContainer">
 				<MLoginButton buttonName="LOG IN"/>
-				<MButton buttonName="CONFIGURACIÓN"/>
+				<MButton buttonName="CONFIGURACIÓN" to='/settings'/>
 			</div>
 		</nav>
 	);

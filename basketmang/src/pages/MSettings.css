@@ -1,0 +1,10 @@
+.sstyle{
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+}
+
+.sbottom{
+    display: flex;
+    justify-content: space-between;
+}

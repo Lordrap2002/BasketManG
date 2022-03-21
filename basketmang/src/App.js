@@ -6,6 +6,7 @@ import {Routes, Route} from 'react-router-dom';
 import MHome from './pages/MHome';
 import MTienda from './pages/MTienda';
 import MHelp from './pages/MHelp';
+import MSettings from './pages/MSettings'; 
 import {connect} from "react-redux";
 
 function App(props){
@@ -16,7 +17,7 @@ function App(props){
 				<Route exact path='/' element={<MHome/>}/>
 				<Route exact path='/tienda' element={<MTienda/>}/>
 				<Route exact path='/help' element={<MHelp/>}/>
-				<Route exact path='/help' element={<MSettings>}/>
+				<Route exact path='/settings' element={<MSettings/>}/>
 			</Routes>
 			{props.showLogin ?
 				<div className='login'>
