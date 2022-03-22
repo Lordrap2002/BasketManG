@@ -15,7 +15,7 @@ function MJBox(props){
         <MButton></MButton>
         <MButton></MButton>
         <MButton></MButton>
-        <MButton></MButton>
+
       </div>
     </nav>
   );

@@ -15,7 +15,6 @@ function MGBox(props){
         <MButton></MButton>
         <MButton></MButton>
         <MButton></MButton>
-        <MButton></MButton>
       </div>
     </nav>
   );

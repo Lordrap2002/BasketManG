@@ -15,7 +15,6 @@ function MEBox(props){
         <MButton></MButton>
         <MButton></MButton>
         <MButton></MButton>
-        <MButton></MButton>
       </div>
     </nav>
   );
