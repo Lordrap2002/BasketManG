@@ -8,6 +8,7 @@ import './MHome.css';
 function MHome(props){
 	return(
 		<div className='hstyle'>
+			{/*<div></div>*/}
 			<div>Home</div>
 			{/*<div>{props.text}</div>*/}	
 			<div className='hmiddle'>

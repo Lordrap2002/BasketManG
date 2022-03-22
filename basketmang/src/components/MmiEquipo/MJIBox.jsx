@@ -1,5 +1,5 @@
 import "./MJIBox.css"
-import MButton from './MButton';
+import MFButton from "../MButton/MFButton";
 
 function MJIBox(props){
   return(
@@ -8,11 +8,11 @@ function MJIBox(props){
         Jugadores Iniciales
       </div>
       <div className="tJIitems">
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
+        <MFButton className="ebutton"></MFButton>
+        <MFButton className="ebutton"></MFButton>
+        <MFButton className="ebutton"></MFButton>
+        <MFButton className="ebutton"></MFButton>
+        <MFButton className="ebutton"></MFButton>
       </div>
     </nav>
   );

@@ -1,5 +1,5 @@
 import "./MJBBox.css"
-import MButton from './MButton';
+import MFButton from "../MButton/MFButton";
 
 function MJBBox(props){
   return(
@@ -8,14 +8,14 @@ function MJBBox(props){
         Jugadores En Banca
       </div>
       <div className="tJBitems">
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
+        <MFButton className="ebutton"></MFButton>
+        <MFButton className="ebutton"></MFButton>
+        <MFButton className="ebutton"></MFButton>
+        <MFButton className="ebutton"></MFButton>
+        <MFButton className="ebutton"></MFButton>
+        <MFButton className="ebutton"></MFButton>
+        <MFButton className="ebutton"></MFButton>
+        <MFButton className="ebutton"></MFButton>
       </div>
     </nav>
   );

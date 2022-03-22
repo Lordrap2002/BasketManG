@@ -1,9 +1,9 @@
 .hmyButton1{
-    background-color: transparent;
+    background-color: green;
     border-radius: 10px;
     border: 0;
     box-shadow: none;
-    color: white;
+    color: rgb(16, 238, 0);
     font-size: x-large;
     font-weight: bold;
     text-decoration: none;

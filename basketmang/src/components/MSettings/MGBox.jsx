@@ -1,5 +1,5 @@
 import "./MGBox.css"
-import MButton from './MButton';
+import MTButton from "../MButton/MTButton";
 
 function MGBox(props){
   return(
@@ -8,13 +8,13 @@ function MGBox(props){
         Jugadores
       </div>
       <div className="sgitems">
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
+        <MTButton className="sbutton"></MTButton>
+        <MTButton className="sbutton"></MTButton>
+        <MTButton className="sbutton"></MTButton>
+        <MTButton className="sbutton"></MTButton>
+        <MTButton className="sbutton"></MTButton>
+        <MTButton className="sbutton"></MTButton>
+        <MTButton className="sbutton"></MTButton>
       </div>
     </nav>
   );

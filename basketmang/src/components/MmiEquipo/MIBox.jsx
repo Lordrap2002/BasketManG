@@ -1,5 +1,5 @@
 import "./MIBox.css"
-import MButton from './MButton';
+import MFButton from "../MButton/MFButton";
 
 function MIBox(props){
   return(
@@ -8,12 +8,12 @@ function MIBox(props){
         Inventario
       </div>
       <div className="tIitems">
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
+        <MFButton className="ebutton"></MFButton>
+        <MFButton className="ebutton"></MFButton>
+        <MFButton className="ebutton"></MFButton>
+        <MFButton className="ebutton"></MFButton>
+        <MFButton className="ebutton"></MFButton>
+        <MFButton className="ebutton"></MFButton>
       </div>
     </nav>
   );

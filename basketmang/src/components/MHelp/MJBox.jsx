@@ -1,5 +1,5 @@
 import "./MJBox.css"
-import MButton from './MButton';
+import MTButton from "../MButton/MTButton";
 
 function MJBox(props){
   return(
@@ -8,14 +8,13 @@ function MJBox(props){
         Jugadores
       </div>
       <div className="hjitems">
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-
+        <MTButton className="hbutton"></MTButton>
+        <MTButton className="hbutton"></MTButton>
+        <MTButton className="hbutton"></MTButton>
+        <MTButton className="hbutton"></MTButton>
+        <MTButton className="hbutton"></MTButton>
+        <MTButton className="hbutton"></MTButton>
+        <MTButton className="hbutton"></MTButton>
       </div>
     </nav>
   );

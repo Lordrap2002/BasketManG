@@ -1,5 +1,5 @@
 import "./MCBox.css"
-import MButton from './MButton';
+import MFButton from "../MButton/MFButton";
 
 function MCBox(props){
   return(
@@ -8,11 +8,11 @@ function MCBox(props){
         Jugadores En Cancha
       </div>
       <div className="scitems">
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
+        <MFButton className="pbutton"></MFButton>
+        <MFButton className="pbutton"></MFButton>
+        <MFButton className="pbutton"></MFButton>
+        <MFButton className="pbutton"></MFButton>
+        <MFButton className="pbutton"></MFButton>
       </div>
     </nav>
   );

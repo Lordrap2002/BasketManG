@@ -1,5 +1,5 @@
 import "./MEBox.css"
-import MButton from './MButton';
+import MTButton from "../MButton/MTButton";
 
 function MEBox(props){
   return(
@@ -8,13 +8,13 @@ function MEBox(props){
         Equipo
       </div>
       <div className="heitems">
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
+        <MTButton className="hbutton"></MTButton>
+        <MTButton className="hbutton"></MTButton>
+        <MTButton className="hbutton"></MTButton>
+        <MTButton className="hbutton"></MTButton>
+        <MTButton className="hbutton"></MTButton>
+        <MTButton className="hbutton"></MTButton>
+        <MTButton className="hbutton"></MTButton>
       </div>
     </nav>
   );

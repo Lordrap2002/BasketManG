@@ -1,5 +1,5 @@
 import "./MPBox.css"
-import MButton from './MButton';
+import MTButton from "../MButton/MTButton";
 
 function MPBox(props){
   return(
@@ -8,13 +8,13 @@ function MPBox(props){
         Equipo
       </div>
       <div className="spitems">
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
+        <MTButton className="sbutton"></MTButton>
+        <MTButton className="sbutton"></MTButton>
+        <MTButton className="sbutton"></MTButton>
+        <MTButton className="sbutton"></MTButton>
+        <MTButton className="sbutton"></MTButton>
+        <MTButton className="sbutton"></MTButton>
+        <MTButton className="sbutton"></MTButton>
       </div>
     </nav>
   );

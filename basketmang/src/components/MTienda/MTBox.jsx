@@ -1,5 +1,5 @@
 import "./MTBox.css"
-import MButton from './MButton';
+import MFButton from "../MButton/MFButton";
 
 function MTBox(props){
   return(
@@ -8,12 +8,12 @@ function MTBox(props){
         Técnicas
       </div>
       <div className="ttitems">
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
+        <MFButton className="tbutton"></MFButton>
+        <MFButton className="tbutton"></MFButton>
+        <MFButton className="tbutton"></MFButton>
+        <MFButton className="tbutton"></MFButton>
+        <MFButton className="tbutton"></MFButton>
+        <MFButton className="tbutton"></MFButton>
       </div>
     </nav>
   );
