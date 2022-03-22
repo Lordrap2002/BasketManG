@@ -14,8 +14,6 @@ function MIBox(props){
         <MButton></MButton>
         <MButton></MButton>
         <MButton></MButton>
-        <MButton></MButton>
-        <MButton></MButton>
       </div>
     </nav>
   );

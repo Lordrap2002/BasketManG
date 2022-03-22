@@ -1,20 +1,20 @@
 .tIbox{
-    width: 25%;
+    width: 20%;
     display: inline-flexbox;
     justify-content: baseline;
     height: 460px;
     justify-self: flex-end;
 	border: 5px solid #000;
     margin-right: 10px;
-    position: relative;
-    top: 5px;
-    left: 300px;
+    position: absolute;
+    top: 150px;
+    left: 1400px;
 }
 
 .tItitle{
     background-color: rgb(5, 82, 5);
     height: 50px;
-    width: 70%;
+    width: 100%;
     font-size: 30px;
     display: center;
     justify-content: space-between;
@@ -24,7 +24,7 @@
 .tIitems{
     background-color: rgb(0, 116, 0);
     height: 400px;
-    width: 70%;
+    width: 100%;
     flex-wrap: wrap;
     display: flex;
     align-content: space-between;

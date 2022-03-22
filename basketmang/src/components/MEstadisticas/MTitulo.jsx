@@ -5,7 +5,7 @@ function MTitulo(props){
   const [showRegister, setShowRegister] = useState(false);
   return(
     <nav className="tituloEstadisticas">
-      Estadisticas
+      Estadísticas
     </nav>
   );
 }
