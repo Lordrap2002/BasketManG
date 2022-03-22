@@ -10,9 +10,14 @@ function MmiEquipo(){
 		<div className='estyle'>
 			<MTitulo></MTitulo>
 			<div className='ebottom'>
+				<div className='eright'>
 				<MJIBox></MJIBox>
-				<MIBox></MIBox>
 				<MJBBox></MJBBox>
+				</div>
+				<div className='eleft'>
+				<MIBox></MIBox>
+				</div>
+				
 			</div>
 		</div>
 	)

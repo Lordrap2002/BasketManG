@@ -1,13 +1,11 @@
 .tJBbox{
-    width: 40%;
+    width: 60%;
     display: inline-flexbox;
     justify-content: baseline;
     height: 460PX;
 	border: 5px solid #000;
     margin-right: 10px;
-    position: absolute;
-    top: 450px;
-    right: 1100px;
+    margin-top: 10%;
 }
 
 .tJBtitle{

@@ -11,3 +11,13 @@
     display: flex;
     justify-content: space-between;
 }
+
+.eright{
+    display: flex;
+    flex-direction: column;
+}
+
+.eleft{
+    display: flex;
+    flex-direction:column;
+}
