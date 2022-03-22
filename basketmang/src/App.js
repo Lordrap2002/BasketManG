@@ -9,7 +9,8 @@ import MHelp from './pages/MHelp';
 import MSettings from './pages/MSettings'; 
 import {connect} from "react-redux";
 import MmiEquipo from './pages/MmiEquipo';
-import MEstadisticas from './pages/MEstadisticas'
+import MEstadisticas from './pages/MEstadisticas';
+import MPartido from './pages/MPartido';
 
 function App(props){
 	return(
@@ -22,6 +23,7 @@ function App(props){
 				<Route exact path='/settings' element={<MSettings/>}/>
 				<Route exact path='/miEquipo' element={<MmiEquipo/>}/>
 				<Route exact path='/estadisticas' element={<MEstadisticas/>}/>
+				<Route exact path='/partido' element={<MPartido/>}/>
 			</Routes>
 			{props.showLogin ?
 				<div className='login'>

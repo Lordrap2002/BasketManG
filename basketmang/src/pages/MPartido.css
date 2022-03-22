@@ -1,0 +1,12 @@
+.pstyle{
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../../public/fondo.png');
+    background-size: cover;
+}
+
+.pbottom{
+    display: flex;
+    justify-content: space-between;
+}

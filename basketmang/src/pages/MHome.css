@@ -1,0 +1,20 @@
+.hstyle{
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../../public/fondo.png');
+    background-size: cover;
+}
+
+.hbottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+.hmiddle{
+    height: 495px;
+}
+
+.hmiddle2{
+    height: 200px;
+}
