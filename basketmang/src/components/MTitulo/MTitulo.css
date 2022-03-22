@@ -1,0 +1,65 @@
+.titulotienda{
+    width: 20%;
+    background-color: lightgreen;
+    height: 80px;
+    font-size: 50px;
+    font-style: italic;
+    align-items: start;
+    align-self: center;
+    border-radius: 50px;
+}
+
+.titulosettings{
+    width: 40%;
+    background-color: lightgreen;
+    height: 80px;
+    font-size: 50px;
+    font-style: italic;
+    align-items: start;
+    align-self: center;
+    border-radius: 50px;
+}
+
+.titulopartido{
+    width: 40%;
+    background-color: lightgreen;
+    height: 80px;
+    font-size: 50px;
+    font-style: italic;
+    align-items: start;
+    align-self: center;
+    border-radius: 50px;
+}
+
+.tituloMiEquipo{
+    width: 20%;
+    background-color: lightgreen;
+    height: 80px;
+    font-size: 50px;
+    font-style: italic;
+    align-items: start;
+    align-self: center;
+    border-radius: 50px;
+}
+
+.titulohelp{
+    width: 30%;
+    background-color: lightgreen;
+    height: 80px;
+    font-size: 50px;
+    font-style: italic;
+    align-items: start;
+    align-self: center;
+    border-radius: 50px;
+}
+
+.tituloEstadisticas{
+    width: 20%;
+    background-color: lightgreen;
+    height: 80px;
+    font-size: 50px;
+    font-style: italic;
+    align-items: start;
+    align-self: center;
+    border-radius: 50px;
+}

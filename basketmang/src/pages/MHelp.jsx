@@ -1,5 +1,5 @@
 import React from 'react';
-import MTitulo from '../components/MHelp/MTitulo';
+import MTitulo from '../components/MTitulo/MTitulo';
 import MJBox from '../components/MHelp/MJBox';
 import MEBox from '../components/MHelp/MEBox';
 import "./MHelp.css"
@@ -7,7 +7,7 @@ import "./MHelp.css"
 function MHelp(){
 	return(
 		<div className='hstyle'>
-			<MTitulo></MTitulo>
+			<MTitulo className="titulohelp" nombre="Tutoriales"></MTitulo>
 			<div className='hbottom'>
 				<MJBox></MJBox>
 				<MEBox></MEBox>
