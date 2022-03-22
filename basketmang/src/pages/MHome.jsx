@@ -7,16 +7,15 @@ import './MHome.css';
 
 function MHome(props){
 	return(
-		<div className='hstyle'>
-			{/*<div></div>*/}
-			<div>Home</div>
-			{/*<div>{props.text}</div>*/}	
-			<div className='hmiddle'>
-				<div className='hmiddle2'></div>
-				<MPartidoButton buttonName="PARTIDO" to='/partido'/>
-			</div>	
-			<MMenuButton buttonName="¿Necesitas ayuda?" to='/help'/>
-
+		<div>
+			<div className='hback'></div>
+			<div className='hstyle'>
+				<div className='hmiddle'>
+					<div className='hmiddle2'></div>
+					<MPartidoButton buttonName="PARTIDO" to='/partido'/>
+				</div>	
+				<MMenuButton buttonName="¿Necesitas ayuda?" to='/help'/>
+			</div>
 		</div>
 	)
 }

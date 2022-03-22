@@ -7,10 +7,13 @@ import "./MTienda.css"
 function MTienda(){
 	return(
 		<div className='tstyle'>
-			<MTitulo className="titulotienda" nombre="Tienda"></MTitulo>
-			<div className='tbottom'>
-				<MJBox></MJBox>
-				<MTBox></MTBox>
+			<div className='tback'></div>
+			<div className='tfront'>
+				<MTitulo className="titulotienda" nombre="Tienda"></MTitulo>
+				<div className='tbottom'>
+					<MJBox></MJBox>
+					<MTBox></MTBox>
+				</div>
 			</div>
 		</div>
 	)

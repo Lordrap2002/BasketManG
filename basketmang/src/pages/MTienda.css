@@ -1,10 +1,21 @@
 .tstyle{
+    position: relative;
+}
+
+.tfront{
     align-items: stretch;
     display: inline-flexbox;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    position: absolute;
+}
+
+.tback{
     background-image: url('../../public/fondo.png');
-    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100vh;
 }
 
 .tbottom{
