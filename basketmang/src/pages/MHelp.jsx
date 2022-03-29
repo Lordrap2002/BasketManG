@@ -6,9 +6,9 @@ import "./MHelp.css"
 
 function MHelp(){
 	return(
-		<div className='hstyle'>
+		<div className='hestyle'>
 			<MTitulo className="titulohelp" nombre="Tutoriales"></MTitulo>
-			<div className='hbottom'>
+			<div className='hebottom'>
 				<MJBox></MJBox>
 				<MEBox></MEBox>
 			</div>

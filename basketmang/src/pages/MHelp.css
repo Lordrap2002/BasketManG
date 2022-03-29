@@ -1,4 +1,4 @@
-.hstyle{
+.hestyle{
     align-items: stretch;
     display: flex;
     flex-direction: column;
@@ -6,7 +6,7 @@
     background-size: cover;
 }
 
-.hbottom{
+.hebottom{
     display: flex;
     justify-content: space-between;
     margin-top: 1%;

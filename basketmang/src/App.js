@@ -16,15 +16,17 @@ function App(props){
 	return(
 		<div className="App">
 			<MHeaderBar/>
-			<Routes>
-				<Route exact path='/' element={<MHome/>}/>
-				<Route exact path='/tienda' element={<MTienda/>}/>
-				<Route exact path='/help' element={<MHelp/>}/>
-				<Route exact path='/settings' element={<MSettings/>}/>
-				<Route exact path='/miEquipo' element={<MmiEquipo/>}/>
-				<Route exact path='/estadisticas' element={<MEstadisticas/>}/>
-				<Route exact path='/partido' element={<MPartido/>}/>
-			</Routes>
+			<div className='spages'>
+				<Routes>
+					<Route exact path='/' element={<MHome/>}/>
+					<Route exact path='/tienda' element={<MTienda/>}/>
+					<Route exact path='/help' element={<MHelp/>}/>
+					<Route exact path='/settings' element={<MSettings/>}/>
+					<Route exact path='/miEquipo' element={<MmiEquipo/>}/>
+					<Route exact path='/estadisticas' element={<MEstadisticas/>}/>
+					<Route exact path='/partido' element={<MPartido/>}/>
+				</Routes>
+			</div>
 			{props.showLogin ?
 				<div className='login'>
 					<MLoginBox/>

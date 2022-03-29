@@ -8,8 +8,8 @@ import './MHome.css';
 function MHome(props){
 	return(
 		<div>
-			<div className='hback'></div>
-			<div className='hstyle'>
+			<div className></div>
+			<div className='hback'>
 				<div className='hmiddle'>
 					<div className='hmiddle2'></div>
 					<MPartidoButton buttonName="PARTIDO" to='/partido'/>
