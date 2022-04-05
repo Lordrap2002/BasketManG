@@ -1,5 +1,10 @@
 .tstyle{
+    background-size: cover;
     position: relative;
+    background-image: url('../../public/fondo.png');
+    position: relative;
+    width: 100%;
+    height: 100vh;
 }
 
 .tfront{
