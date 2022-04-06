@@ -7,7 +7,7 @@ import "./MTienda.css"
 function MTienda(){
 	return(
 		<div className='tstyle'>
-			<div className='tback'></div>
+			{/*<div className='tback'></div>*/}
 			<div className='tfront'>
 				<MTitulo className="titulotienda" nombre="Tienda"></MTitulo>
 				<div className='tbottom'>

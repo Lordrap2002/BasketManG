@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import axios from 'axios';
 import './App.css';
 import MHeaderBar from './components/MHeaderBar/MHeaderBar';
 import MLoginBox from './components/MLogin/MLoginBox';
@@ -13,6 +14,11 @@ import MEstadisticas from './pages/MEstadisticas';
 import MPartido from './pages/MPartido';
 
 function App(props){
+	useEffect(()=>{
+		axios.get("http://localhost:5050/").then((response)=>{
+			console.log(response);
+		});
+	});
 	return(
 		<div className="App">
 			<MHeaderBar/>
