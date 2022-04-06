@@ -8,8 +8,13 @@ import './MHome.css';
 function MHome(props){
 	return(
 		<div>
+<<<<<<< HEAD:Proyect/basketmang/src/pages/MHome.jsx
 			{/*<div className='hback'></div>*/}
 			<div className='hstyle'>
+=======
+			<div className></div>
+			<div className='hback'>
+>>>>>>> 3dea43af36bf233794d7203c6c287f90915dcda6:basketmang/src/pages/MHome.jsx
 				<div className='hmiddle'>
 					<div className='hmiddle2'></div>
 					<MPartidoButton buttonName="PARTIDO" to='/partido'/>
