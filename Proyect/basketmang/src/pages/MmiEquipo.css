@@ -3,8 +3,6 @@
     display: inline-flexbox;
     display: flex;
     flex-direction: column;
-    background-image: url('../../public/fondo.png');
-    background-size: cover;
 }
 
 .ebottom{

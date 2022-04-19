@@ -8,14 +8,13 @@ import './MHome.css';
 function MHome(props){
 	return(
 		<div>
-			<div className></div>
-			<div className='hback'>
+			<div className='hback'></div>
 				<div className='hmiddle'>
-					<div className='hmiddle2'></div>
 					<MPartidoButton buttonName="PARTIDO" to='/partido'/>
+				</div>
+				<div className='hmiddle2'>
+					<MMenuButton buttonName="¿Necesitas ayuda?" to='/help'/>
 				</div>	
-				<MMenuButton buttonName="¿Necesitas ayuda?" to='/help'/>
-			</div>
 		</div>
 	)
 }

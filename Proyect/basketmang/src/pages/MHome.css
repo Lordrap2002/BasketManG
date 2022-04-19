@@ -8,10 +8,9 @@
 }
 
 .hback{
-    background-image: url('../../public/fondo.png');
-    position: relative;
-    width: 100%;
-    height: 90.3vh;
+    width: 200px;
+    height: 100px;
+
 }
 
 .hbottom{
@@ -20,9 +19,13 @@
 }
 
 .hmiddle{
-    height: 495px;
+    left: calc(50% - 70px);
+    top: 50%;
+    position: absolute;
 }
 
 .hmiddle2{
-    height: 200px;
+    left: calc(50% - 120px);
+    bottom: 0%;
+    position: absolute;
 }
