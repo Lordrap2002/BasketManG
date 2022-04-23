@@ -2,30 +2,20 @@
     align-items: stretch;
     display: flex;
     flex-direction: column;
-    position: absolute;
     width: 100%;
-    height: 90.3%;
+    height: 100vh;
 }
-
-.hback{
-    width: 200px;
-    height: 100px;
-
-}
-
-.hbottom{
-    display: flex;
-    justify-content: space-between;
+.up{
+    height: 250px;
 }
 
 .hmiddle{
     left: calc(50% - 70px);
-    top: 50%;
-    position: absolute;
+    height: 270px;
 }
 
 .hmiddle2{
     left: calc(50% - 120px);
     bottom: 0%;
-    position: absolute;
+    height: 20px;
 }

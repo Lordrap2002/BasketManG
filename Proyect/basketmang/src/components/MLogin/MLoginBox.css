@@ -4,6 +4,7 @@
     display: inline-flexbox;
     justify-content: baseline;
     height: 222px;
+    z-index: 2;
 }
 
 .logininerContainer{

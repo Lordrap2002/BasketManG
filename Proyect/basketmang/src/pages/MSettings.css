@@ -8,4 +8,5 @@
     margin-top: 1%;
     display: flex;
     justify-content: space-between;
+    height: calc(100vh - 80%);
 }

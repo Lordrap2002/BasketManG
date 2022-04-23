@@ -4,7 +4,7 @@ import MLoginButton from './MLoginButton';
 
 function MHeaderBar(props){
 	return(
-		<nav className="mystyle">
+		<nav className="bstyle">
 			<div className="innerContainer">
 				<MButton buttonName="MENU PRINCIPAL" to='/'/>
 				<MButton buttonName="TIENDA" to='/tienda'/>
