@@ -14,9 +14,11 @@ import MEstadisticas from './pages/MEstadisticas';
 import MPartido from './pages/MPartido';
 
 function App(props){
+	const [users, setUsers] = useState([]);
 	useEffect(()=>{
-		axios.get("http://localhost:5050/").then((response)=>{
-			console.log(response);
+		axios.get("http://localhost:5050/usuarios").then((response)=>{
+			console.log(response.data.data);
+			setUsers(response.data.data);
 		});
 	});
 	return(
@@ -45,6 +47,9 @@ function App(props){
 				:
 				null
 			}
+			{/*users.map(user => {
+					return <div key={user.codigo_usuario}>{user.codigo_usuario}{" "}{user.nombre}{" "}{user.email}</div>
+				})*/}
 		</div>
 	);
 }
