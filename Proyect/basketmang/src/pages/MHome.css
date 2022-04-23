@@ -6,16 +6,16 @@
     height: 100vh;
 }
 .up{
-    height: 250px;
+    height: 40vh;
 }
 
 .hmiddle{
     left: calc(50% - 70px);
-    height: 270px;
+    height: 40vh;
 }
 
 .hmiddle2{
     left: calc(50% - 120px);
     bottom: 0%;
-    height: 20px;
+    height: 10vh;
 }

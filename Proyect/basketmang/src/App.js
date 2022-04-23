@@ -12,6 +12,7 @@ import {connect} from "react-redux";
 import MmiEquipo from './pages/MmiEquipo';
 import MEstadisticas from './pages/MEstadisticas';
 import MPartido from './pages/MPartido';
+import simpleParallax from 'simple-parallax-js';
 
 function App(props){
 	const [users, setUsers] = useState([]);
@@ -21,6 +22,13 @@ function App(props){
 			setUsers(response.data.data);
 		});
 	});
+	var paginas = document.getElementsByClassName('spages');
+	new simpleParallax(paginas, {
+		scale: 2,
+		delay: 1,
+		orientation: 'up',
+		overflow: true,
+		transition: 'cubic-bezier(0,0,0,1)'});
 	return(
 		<div className="App">
 			<div className='home'>
@@ -40,6 +48,7 @@ function App(props){
 					</Routes>
 				</div>
 			</div>
+			<div className='footer'></div>
 			{props.showLogin ?
 				<div className='login'>
 					<MLoginBox/>

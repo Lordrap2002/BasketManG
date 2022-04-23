@@ -5,7 +5,7 @@
   justify-content: center;
   z-index: 2;
   position: relative;
-  top: -1150px;
+  top: calc(-1150px - 30vh);
 }
 
 .home{
@@ -38,6 +38,12 @@
     width: 100%;
     height: calc(100vh - 60px);
     z-index: 2;
+}
+
+.footer{
+  width: 100%;
+  background-color: darkgreen;
+  height: 30vh;
 }
 
 .titulo {
