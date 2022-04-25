@@ -1,22 +1,43 @@
-.hmyButton1{
-    background-color: green;
-    border-radius: 10px;
+.mHeaderButton {
+    background-color: transparent;
     border: 0;
-    box-shadow: none;
-    color: rgb(16, 238, 0);
+    border-radius: 10px;
     font-size: x-large;
     font-weight: bold;
+  }
+  
+  .mHeaderButton:hover {
+    cursor: pointer;
+  }
+  
+  .mHeaderButton-text {
+    color: white;
     text-decoration: none;
+  }
+  
+  .mHeaderButton-text:hover {
+    color: #3500f3;
+  }
+  
+  .myButton41{
+    background-color: transparent;
+    border: 0;
+    border-radius: 10px;
+    font-size: x-large;
+    font-weight: bold;
 }
 
-.hmyButton1:hover{
+.myButton41:hover{
     color: rgb(147, 226, 147);
     cursor: pointer;
 }
 
-.hmyButton1-text{
+.myButton41-text{
     color: white;
     text-decoration: none;
     
 }
 
+.myButton41-text:hover{
+    color: rgb(66, 80, 209);
+}

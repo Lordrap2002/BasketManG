@@ -2,12 +2,15 @@
     align-items: stretch;
     display: flex;
     flex-direction: column;
-    background-image: url('../../public/fondo.png');
-    background-size: cover;
 }
 
 .pbottom{
     display: flex;
-    justify-content: space-between;
     height: calc(100vh - 80%);
+}
+
+.pbottomRa{
+    display: flex;
+    height: 100px;
+    right: 0cm;
 }

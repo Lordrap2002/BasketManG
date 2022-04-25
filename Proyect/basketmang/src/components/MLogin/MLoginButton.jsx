@@ -1,30 +1,67 @@
-
+import React, { Component } from 'react';
 import './MLoginButton.css';
-import {Link} from "react-router-dom";
-import {connect} from "react-redux";
 
-function MLoginButton(props){
-  function onButtonClick(){
+class MLoginRegister extends Component {
+  render() {
+    return(
+      <div className='mLoginRegister-container'>
+        <button className='mLoginRegister-button mLoginRegister-button-selected'>
+          INICIA SESIÓN
+        </button>
+        <button className='mLoginRegister-button'>
+          REGÍSTRATE
+        </button>
+        {
+          !this.state.showRegister ?
+          <div className='mLoginRegister-input-container'>
+            <input 
+              className='mLoginRegister-input'
+              placeholder='Ingresa tu dirección de correo electrónico'
+              type='text'/>
+            <input
+              className='mLoginRegister-input'
+              placeholder='Ingresa tu contraseña' 
+              type='password'/>
+            <div className='mLoginRegister-password-help-container'>
+              <button className='mLoginRegister-password-help'>
+                Ayuda con la contraseña
+              </button>
+            </div>
+            <div className='mLoginRegister-action-button-container'>
+              <button className='mLoginRegister-action-button'>
+                INICIA SESIÓN
+              </button>
+            </div>
+          </div>
+          :
+          <div className='mLoginRegister-input-container'>
+            <input 
+              className='mLoginRegister-input'
+              placeholder='Ingresa el nombre de tu jugador'/>
+            <input
+              className='mLoginRegister-input'
+              placeholder='Ingresa tu dirección de correo electrónico'/>
+            <input 
+              className='mLoginRegister-input'
+              placeholder='Ingresa tu contraseña'/>
+            <div className='mLoginRegister-action-button-container'>
+              <button className='mLoginRegister-action-button'>
+                REGÍSTRATE
+              </button>
+            </div>
+          </div>
+        }
+      </div>
+    );
   }
-  return(
-    <button className='loginmyButton1' onClick={() => {onButtonClick();}}>
-      { props.href ?
-        <a
-          className='loginmyButton-text'
-          href={props.href}>
-          {props.buttonName}
-        </a>
-        : props.to ?
-        <Link to={props.to} className='loginmyButton-text'>
-          {props.buttonName}
-        </Link>
-        :
-        <span className='loginmyButton-text'>
-          {props.buttonName}
-        </span>
-      }
-    </button>
-  );
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      showRegister: false
+    };
+  }
 }
 
-export default MLoginButton;
+export default MLoginRegister;

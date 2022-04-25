@@ -16,12 +16,12 @@ import simpleParallax from 'simple-parallax-js';
 
 function App(props){
 	const [users, setUsers] = useState([]);
-	useEffect(()=>{
-		axios.get("http://localhost:5050/usuarios").then((response)=>{
-			console.log(response.data.data);
-			setUsers(response.data.data);
-		});
-	});
+	//useEffect(()=>{
+	//	axios.get("http://localhost:5050/usuarios").then((response)=>{
+	//		console.log(response.data.data);
+	//		setUsers(response.data.data);
+	//	});
+	//});
 	var paginas = document.getElementsByClassName('spages');
 	new simpleParallax(paginas, {
 		scale: 2,
