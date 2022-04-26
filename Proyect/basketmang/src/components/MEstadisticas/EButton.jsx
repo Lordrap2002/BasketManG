@@ -1,7 +1,7 @@
-import './MButton.css';
+import './EButton.css';
 import {Link} from "react-router-dom";
 
-function MButton(props){
+function EButton(props){
   function onButtonClick(){
   }
   return(
@@ -25,4 +25,4 @@ function MButton(props){
   );
 }
 
-export default MButton;
+export default EButton;

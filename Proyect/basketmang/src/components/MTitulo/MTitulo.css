@@ -1,65 +1,89 @@
 .titulotienda{
     width: 20%;
-    background-color: lightgreen;
-    height: 80px;
-    font-size: 50px;
+    background-color: transparent;
+    height: 90px;
+    font-size: 70px;
     font-style: italic;
+    font-weight: bold;
+    color: rgb(212, 92, 44);
+    text-shadow: 0 0 3px #bd10f1, 0 0 5px #0000FF;
     align-items: start;
     align-self: center;
-    border-radius: 50px;
+    border: none;
+    border-radius: 10px;
 }
 
 .titulosettings{
     width: 40%;
-    background-color: lightgreen;
-    height: 80px;
-    font-size: 50px;
+    background-color: transparent;
+    height: 90px;
+    font-size: 70px;
     font-style: italic;
+    font-weight: bold;
+    color: rgb(212, 92, 44);
+    text-shadow: 0 0 3px #bd10f1, 0 0 5px #0000FF;
     align-items: start;
     align-self: center;
-    border-radius: 50px;
+    border: none;
+    border-radius: 10px;
 }
 
 .titulopartido{
     width: 40%;
-    background-color: lightgreen;
-    height: 80px;
-    font-size: 50px;
+    background-color: transparent;
+    height: 90px;
+    font-size: 70px;
     font-style: italic;
+    font-weight: bold;
+    color: rgb(212, 92, 44);
+    text-shadow: 0 0 3px #bd10f1, 0 0 5px #0000FF;
     align-items: start;
     align-self: center;
-    border-radius: 50px;
+    border: none;
+    border-radius: 10px;
 }
 
 .tituloMiEquipo{
     width: 20%;
-    background-color: lightgreen;
+    background-color: transparent;
     height: 80px;
-    font-size: 50px;
+    font-size: 70px;
     font-style: italic;
+    font-weight: bold;
+    color: rgb(212, 92, 44);
+    text-shadow: 0 0 3px #bd10f1, 0 0 5px #0000FF;
     align-items: start;
     align-self: center;
-    border-radius: 50px;
+    border: none;
+    border-radius: 10px;
 }
 
 .titulohelp{
     width: 30%;
-    background-color: lightgreen;
-    height: 80px;
-    font-size: 50px;
+    background-color: transparent;
+    height: 90px;
+    font-size: 70px;
     font-style: italic;
+    font-weight: bold;
+    color: rgb(212, 92, 44);
+    text-shadow: 0 0 3px #bd10f1, 0 0 5px #0000FF;
     align-items: start;
     align-self: center;
-    border-radius: 50px;
+    border: none;
+    border-radius: 10px;
 }
 
 .tituloEstadisticas{
     width: 20%;
-    background-color: lightgreen;
+    background-color: transparent;
     height: 80px;
-    font-size: 50px;
+    font-size: 70px;
     font-style: italic;
+    font-weight: bold;
+    color: rgb(212, 92, 44);
+    text-shadow: 0 0 3px #bd10f1, 0 0 5px #0000FF;
     align-items: start;
     align-self: center;
-    border-radius: 50px;
+    border: none;
+    border-radius: 10px;
 }

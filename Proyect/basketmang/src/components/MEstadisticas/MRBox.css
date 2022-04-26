@@ -19,3 +19,13 @@
     justify-content: space-between;
     color: black;
 }
+
+.Ritems{
+    background-color: rgb(0, 116, 0);
+    height: 370px;
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+}
