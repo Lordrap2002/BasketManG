@@ -1,10 +1,9 @@
 .myButton2{
     background-color: transparent;
-    border-radius: 10px;
     border: 0;
     box-shadow: none;
     color: green;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
     text-decoration: none;
 }

@@ -10,6 +10,7 @@
     align-items: end;
     height: 3cm;
     width: 12cm;
+    font-style: bold;
 }
 
 .myButton4:hover{
