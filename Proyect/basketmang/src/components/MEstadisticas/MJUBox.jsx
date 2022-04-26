@@ -13,8 +13,6 @@ function MJUBox(props){
         <MTButton className="hbutton"></MTButton>
         <MTButton className="hbutton"></MTButton>
         <MTButton className="hbutton"></MTButton>
-        <MTButton className="hbutton"></MTButton>
-        <MTButton className="hbutton"></MTButton>
       </div>
     </nav>
   );

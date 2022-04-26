@@ -2,7 +2,7 @@
     width: 55%;
     display: inline-flexbox;
     justify-content: baseline;
-    height: 350px;
+    height: 370px;
 	border: 5px solid #000;
     margin-left: 10px;
 }
@@ -19,7 +19,7 @@
 
 .tjitems{
     background-color: rgb(231, 187, 105);
-    height: 290px;
+    height: 310px;
     width: 100%;
     flex-wrap: wrap;
     display: flex;

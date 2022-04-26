@@ -23,13 +23,15 @@ function App(props){
 	//		setUsers(response.data.data);
 	//	});
 	//});
-	var paginas = document.getElementsByClassName('spages');
-	new simpleParallax(paginas, {
-		scale: 2,
-		delay: 1,
-		orientation: 'up',
-		overflow: true,
-		transition: 'cubic-bezier(0,0,0,1)'});
+	useEffect(()=>{
+		var paginas = document.getElementsByClassName('spages');
+		new simpleParallax(paginas, {
+			scale: 2,
+			delay: 1,
+			orientation: 'up',
+			overflow: true,
+			transition: 'cubic-bezier(0,0,0,1)'});
+	});
 	return(
 		<div className="App">
 			<div className='home'>

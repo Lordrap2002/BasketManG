@@ -12,7 +12,7 @@ function MTButton(props){
           href={props.href}>
           {props.buttonName}
         </a>
-        : props.className=='sbutton' ?
+        : props.className=='sbutton' || props.className=='hbutton'?
         <div>
           Lore Ipsum
         </div>
