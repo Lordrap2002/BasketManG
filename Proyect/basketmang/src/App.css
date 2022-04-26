@@ -13,7 +13,7 @@
   height: 1200px;
   position: sticky;
   z-index: 2;
-  background-color: green;
+  background-color: rgb(170, 94, 0);
 }
 
 .headbar{
@@ -42,8 +42,15 @@
 
 .footer{
   width: 100%;
-  background-color: darkgreen;
+  background-color: orangered;
   height: 30vh;
+  display: flex;
+}
+
+.fooitems{
+  color: white;
+  font-size: x-large;
+  margin: 80px;
 }
 
 .titulo {

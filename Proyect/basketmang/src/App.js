@@ -13,6 +13,7 @@ import MmiEquipo from './pages/MmiEquipo';
 import MEstadisticas from './pages/MEstadisticas';
 import MPartido from './pages/MPartido';
 import simpleParallax from 'simple-parallax-js';
+import MTButton from './components/MButton/MTButton';
 
 function App(props){
 	const [users, setUsers] = useState([]);
@@ -48,7 +49,20 @@ function App(props){
 					</Routes>
 				</div>
 			</div>
-			<div className='footer'></div>
+			<div className='footer'>
+				<div className='fooitems'>
+					BasketManG © 2022 - 2022
+				</div>
+				<div className='fooitems'>
+					Terminos de Servicio
+				</div>
+				<div className='fooitems'>
+					Política de Privacidad
+				</div>
+				<div className='fooitems'>
+					Contacto
+				</div>
+			</div>
 			{props.showLogin ?
 				<div className='login'>
 					<MLoginBox/>

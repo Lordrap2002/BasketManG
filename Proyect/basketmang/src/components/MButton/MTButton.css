@@ -27,3 +27,18 @@
     height: 5%;
     margin: 4%;
 }
+
+.foobutton{
+    background-color: transparent;
+    border-radius: 10px;
+    border: 0;
+    box-shadow: none;
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    width: 90%;
+    height: 5%;
+    margin: 4%;
+}
