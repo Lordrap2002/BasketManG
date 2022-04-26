@@ -41,3 +41,20 @@
 .myButton41-text:hover{
     color: rgb(66, 80, 209);
 }
+
+.myButtonset{
+  background-color: transparent;
+  background-size: 60% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: transparent;
+  width: 100%;
+  font-size: xx-large;
+  border-radius: 10px;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Ic_settings_48px.svg/2048px-Ic_settings_48px.svg.png);
+}
+
+.myButtonset:hover{
+color: transparent;
+}
+

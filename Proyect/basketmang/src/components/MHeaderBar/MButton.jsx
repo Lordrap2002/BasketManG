@@ -14,14 +14,14 @@ function MButton(props){
           href={props.href}>
           {props.buttonName}
         </a>
-        : props.to ?
+        : props.to != '/settings' ?
         <Link to={props.to} className='myButton41-text'>
           {props.buttonName}
         </Link>
         :
-        <span className='myButton41-text'>
+        <Link to={props.to} className='myButtonset'>
           {props.buttonName}
-        </span>
+        </Link>
       }
     </button>
   );
