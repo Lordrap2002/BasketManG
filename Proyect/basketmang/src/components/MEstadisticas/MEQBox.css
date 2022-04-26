@@ -5,10 +5,8 @@
     height: 430px;
     justify-self: flex-end;
 	border: 5px solid #000;
-    margin-right: 200px;
     position: relative;
     top: 5px;
-    left: 200px;
 }
 
 .EQtitle{

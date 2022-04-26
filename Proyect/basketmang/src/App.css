@@ -1,11 +1,11 @@
 .login{
   align-items: center;
   display: flex;
-  height: calc(100vh - 150px);
+  height: 0px;
   justify-content: center;
-  z-index: 2;
+  z-index: 99;
   position: relative;
-  top: calc(-1150px - 30vh);
+  top: calc(-1100px);
 }
 
 .home{
@@ -17,7 +17,7 @@
 }
 
 .headbar{
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 100;
