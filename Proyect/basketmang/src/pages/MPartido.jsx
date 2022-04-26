@@ -2,6 +2,8 @@ import React from 'react';
 import MTitulo from '../components/MTitulo/MTitulo';
 import MCBox from '../components/MPartido/MCBox';
 import MJRBox from '../components/MPartido/MJRBox';
+import PABox from '../components/MPartido/PABox';
+import MPartidoButton2 from '../components/MPartido/MPartidoButton2';
 import "./MPartido.css"
 
 function MPartido(){
@@ -13,6 +15,14 @@ function MPartido(){
 			<div className='pbottom'>
 				<MCBox></MCBox>
 				<MJRBox></MJRBox>
+			</div>
+			<div className='pbottom'>
+				<PABox></PABox>
+				<div className="padis">
+        			<MPartidoButton2 buttonName="Cambiar Jugador"></MPartidoButton2>
+        			<MPartidoButton2 buttonName="Cambiar Estrategia"></MPartidoButton2>
+        			<MPartidoButton2 buttonName="Time Out"></MPartidoButton2>
+      			</div>
 			</div>
 		</div>
 	)

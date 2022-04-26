@@ -1,0 +1,45 @@
+.pabox{
+    width: 65%;
+    display: inline-flexbox;
+    justify-content: baseline;
+    height: 320px;
+	border: 5px solid #000;
+    margin-left: 100px;
+    top: 30%;
+    left: 30%;
+    margin-bottom: 3cm;
+}
+
+
+.patitle{
+    background-color: rgb(255, 187, 0);
+    height: 60px;
+    font-style: italic;
+    width: 100%;
+    font-size: 40px;
+    display: center;
+    justify-content: space-between;
+    color: whitesmoke;
+}
+
+.paitems{
+    background-color: rgb(255, 231, 180);
+    opacity: 70%;
+    height: 250px;
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+    background-size: cover;
+}
+
+.paspaces{
+    height: 30px;
+    width: 3cm;
+}
+
+.padis{
+    width: 10%;
+    height: 400px;
+}

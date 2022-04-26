@@ -10,14 +10,14 @@ function MHeaderBar(props){
 				alt='app-logo' 
 				className='mHeaderBar-logo'
 				src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Basketball_Clipart.svg/240px-Basketball_Clipart.svg.png'/>
-				<img 
-				alt='app-logo' 
-				className='mHeaderBar-logo'
-				src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Basketball_Clipart.svg/240px-Basketball_Clipart.svg.png'/>
 				<MButton buttonName="MENU PRINCIPAL" to='/'/>
 				<MButton buttonName="TIENDA" to= '/tienda'/>
 				<MButton buttonName="MI EQUIPO" to='/miEquipo'/>
 				<MButton buttonName="ESTADÍSTICAS" to='/estadisticas'/>
+				<img 
+				alt='app-logo' 
+				className='mHeaderBar-logo'
+				src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Basketball_Clipart.svg/240px-Basketball_Clipart.svg.png'/>
 			</div>
 			<div className='mHeaderBar-rightContainer'>
 				<MLoginButton buttonName="LOG IN"/>

@@ -21,7 +21,6 @@
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    width: 40%;
     margin-right: 2%;
 }
 
@@ -46,7 +45,7 @@
     display: flex;
     justify-content: space-between;
     height: 65px;
-    width: 60%;
+    width: 80%;
 }
   
 .mHeaderBar-rightContainer {

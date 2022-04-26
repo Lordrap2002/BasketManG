@@ -1,0 +1,30 @@
+.myButton9{
+    background-color: orange;
+    border-radius: 20px;
+    border: 3px solid rgb(255, 238, 0);
+    box-shadow: none;
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: dashed;
+    align-items: end;
+    height: 2cm;
+    width: 6cm;
+    margin-left: 50px;
+    margin-bottom: 30%;
+}
+
+.myButton9:hover{
+    color: rgb(147, 226, 147);
+    cursor: pointer;
+}
+
+.myButton9-text{
+    color: white;
+    text-decoration: none;
+    
+}
+
+.myButton9-text:hover{
+    color: rgb(66, 80, 209);
+}
