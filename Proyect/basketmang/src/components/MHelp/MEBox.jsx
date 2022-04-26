@@ -8,13 +8,13 @@ function MEBox(props){
         Equipo
       </div>
       <div className="heitems">
-        <MTButton className="hbutton"></MTButton>
-        <MTButton className="hbutton"></MTButton>
-        <MTButton className="hbutton"></MTButton>
-        <MTButton className="hbutton"></MTButton>
-        <MTButton className="hbutton"></MTButton>
-        <MTButton className="hbutton"></MTButton>
-        <MTButton className="hbutton"></MTButton>
+        <MTButton className="sbutton"></MTButton>
+        <MTButton className="sbutton"></MTButton>
+        <MTButton className="sbutton"></MTButton>
+        <MTButton className="sbutton"></MTButton>
+        <MTButton className="sbutton"></MTButton>
+        <MTButton className="sbutton"></MTButton>
+        <MTButton className="sbutton"></MTButton>
       </div>
     </nav>
   );

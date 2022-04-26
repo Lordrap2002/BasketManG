@@ -8,13 +8,13 @@ function MJBox(props){
         Jugadores
       </div>
       <div className="hjitems">
-        <MTButton className="hbutton"></MTButton>
-        <MTButton className="hbutton"></MTButton>
-        <MTButton className="hbutton"></MTButton>
-        <MTButton className="hbutton"></MTButton>
-        <MTButton className="hbutton"></MTButton>
-        <MTButton className="hbutton"></MTButton>
-        <MTButton className="hbutton"></MTButton>
+        <MTButton className="sbutton"></MTButton>
+        <MTButton className="sbutton"></MTButton>
+        <MTButton className="sbutton"></MTButton>
+        <MTButton className="sbutton"></MTButton>
+        <MTButton className="sbutton"></MTButton>
+        <MTButton className="sbutton"></MTButton>
+        <MTButton className="sbutton"></MTButton>
       </div>
     </nav>
   );
