@@ -26,3 +26,16 @@
     align-content: space-between;
     justify-content: space-between;
 }
+
+.pruebita{
+    border-radius: 10px;
+    border: 0;
+    box-shadow: none;
+    color: transparent;
+    font-size: x-large;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+}

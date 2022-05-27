@@ -16,6 +16,7 @@ function MPartido(){
 				<MCBox></MCBox>
 				<MJRBox></MJRBox>
 			</div>
+			<div className='pbottomRa'></div>
 			<div className='pbottom'>
 				<PABox></PABox>
 				<div className="padis">

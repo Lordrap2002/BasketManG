@@ -5,6 +5,7 @@
     border: 0;
     box-shadow: none;
     color: white;
+    background-color: orange;
     font-size: x-large;
     font-weight: bold;
     text-decoration: none;
@@ -32,13 +33,11 @@
 }
 
 .tbutton{
-  
-    background-size: 100px 100px;
-    background-color: yellowgreen;
     border-radius: 10px;
     border: 0;
     box-shadow: none;
-    color: white;
+    color: black;
+    background-color: black;
     font-size: x-large;
     font-weight: bold;
     text-decoration: none;
@@ -46,5 +45,16 @@
     width: 100px;
     height: 100px;
     margin: 4%;
+}
+
+.prueba{
+    font-size: x-large;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    margin: 4%;
+    background-color: transparent;
 }
 
