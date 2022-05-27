@@ -14,6 +14,7 @@ import MEstadisticas from './pages/MEstadisticas';
 import MPartido from './pages/MPartido';
 import simpleParallax from 'simple-parallax-js';
 import MTButton from './components/MButton/MTButton';
+import MModal from './components/MModal/MModal';
 
 function App(props){
 	const [users, setUsers] = useState([]);
@@ -69,6 +70,7 @@ function App(props){
 				<div className='login'>
 					<MLoginBox/>
 				</div>
+
 				:
 				null
 			}

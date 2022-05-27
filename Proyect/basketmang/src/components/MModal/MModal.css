@@ -1,0 +1,11 @@
+.text-color{
+    color: red;
+}
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
