@@ -1,4 +1,6 @@
 import "./MModal.css"
+import {setShowLogin} from "../../store/actions/ui";
+import {connect} from "react-redux";
 
 function MModal(props){
     return(
@@ -10,4 +12,8 @@ function MModal(props){
     
 }
 
-export default MModal;
+const mapActionsToProps = {
+    setShowLogin
+};
+
+export default connect(null, mapActionsToProps) (MModal);

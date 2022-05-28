@@ -67,9 +67,13 @@ function App(props){
 				</div>
 			</div>
 			{props.showLogin ?
-				<div className='login'>
+				<MModal>
+					<div className='login'>
 					<MLoginBox/>
-				</div>
+					</div>
+				</MModal>
+					
+				
 
 				:
 				null

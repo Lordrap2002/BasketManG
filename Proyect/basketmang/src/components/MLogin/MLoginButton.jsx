@@ -59,7 +59,7 @@ class MLoginRegister extends Component {
     super(props);
 
     this.state = {
-      showRegister: false
+      showRegister: true
     };
   }
 }
