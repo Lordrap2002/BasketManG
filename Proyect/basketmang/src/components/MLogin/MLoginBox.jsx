@@ -1,26 +1,46 @@
 
 import "./MLoginBox.css";
-import React, { Component } from 'react';
-import MLoginButton from './MLoginButton';
-import MContador from './MContador';
-import MInput from './MInput';
+import axios from 'axios';
+import React from 'react';
 import { useState, useEffect} from 'react';
+import {Link} from "react-router-dom";
+import {setUsuario} from "../../store/actions/ui";
+import {connect} from "react-redux";
 
-function MLoginBox(){
+function MLoginBox(props){
   const [register, setRegister] = useState(false);
   const [enter, setEnter] = useState(false);
   const [input1, setInput1] = useState('');
   const actualizarInput1 = char => {setInput1(char.target.value);};
   const [input2, setInput2] = useState('');
   const actualizarInput2 = char => {setInput2(char.target.value);};
-  const [user, setUser] = useState(['','']);
+  const [user, setUser] = useState(-1);
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    axios.get("http://localhost:5050/usuarios/").then((response)=>{
+			  setUsers(response.data.data);
+		  });
+  });
 
   useEffect(() => {
     if(enter){
-      setUser([input1,input2]);
       setEnter(false);
+      for (var i = 0; i < users.length; i++){
+        if (users[i].email === input1 && users[i].contraseña === input2){
+          setUser(users[i].codigo_usuario);
+        }
+      }
+      if(user !== -1){
+        onLogin();
+      } 
+      
     }
-  }, [enter, input1, input2]);
+  }, [enter, input1, input2, users, user]);
+
+  function onLogin(){
+    props.setUsuario(user);
+  }
 
   return(
     <div className='mLoginRegister-container'>
@@ -76,5 +96,14 @@ function MLoginBox(){
   );
 }
 
+const mapActionsToProps = {
+  setUsuario
+};
 
-export default MLoginBox;
+const mapStatesToProps = (state) => {
+	return{
+		user: state.uiReducer.user
+	};
+}
+
+export default connect(mapStatesToProps, mapActionsToProps)(MLoginBox);

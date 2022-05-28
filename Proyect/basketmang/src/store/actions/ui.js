@@ -5,3 +5,10 @@ export const setShowLogin = (showLogin) => (dispatch) => {
         payload: {showLogin}
     })
 }
+
+export const setUsuario = (user) => (dispatch) => {
+    dispatch({
+        type: "SET_USER",
+        payload: {user}
+    })
+}

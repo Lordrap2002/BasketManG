@@ -1,7 +1,8 @@
 
 const INITIAL_STATE = {
     text: 'Hola React Redux!',
-    showLogin: false
+    showLogin: false,
+    user: -1
 };
 
 const uiReducer = (state = INITIAL_STATE, action) => {
@@ -10,7 +11,12 @@ const uiReducer = (state = INITIAL_STATE, action) => {
             return{
                 ...state,
                 showLogin: action.payload.showLogin,
-            };    
+            };  
+        case "SET_USER":
+            return{
+                ...state,
+                user: action.payload.user,
+            }; 
         default:
             return state;
     }

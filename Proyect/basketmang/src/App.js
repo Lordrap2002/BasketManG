@@ -18,14 +18,10 @@ import MModal from './components/MModal/MModal';
 
 function App(props){
 	const [users, setUsers] = useState([]);
-	const [user, setUser] = useState([]);
 	useEffect(()=>{
-		axios.get("http://localhost:5050/usuarios/3").then((response)=>{
+		axios.get("http://localhost:5050/usuarios/").then((response)=>{
 			//console.log(response.data.data);
 			setUsers(response.data.data);
-		});
-		axios.get("http://localhost:5050/usuarios/3").then((response)=>{
-			setUser(response.data.data);
 		});
 	});
 	useEffect(()=>{
@@ -77,18 +73,20 @@ function App(props){
 				:
 				null
 			}
-			{users.map(usuario => {
+			{/*users.map(usuario => {
 					return <div key={usuario.codigo_usuario}>{usuario.codigo_usuario}{" "}{usuario.nombre}{" "}{usuario.email}</div>
-				})}
-			 {/*<div key={user.codigo_usuario}>{user.codigo_usuario}{" "}{user.nombre}{" "}{user.email}</div>
-				*/}
+				})*/}
+			 {/*user.map(usu => {
+					return <div key={usu.codigo_usuario}>{usu.codigo_usuario}{" "}{usu.nombre}{" "}{usu.email}</div>
+				})*/} 
 		</div>
 	);
 }
 
 const mapStatesToProps = (state) => {
 	return{
-		showLogin: state.uiReducer.showLogin
+		showLogin: state.uiReducer.showLogin,
+		user: state.uiReducer.user
 	};
 }
 
