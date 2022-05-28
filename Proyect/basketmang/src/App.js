@@ -18,12 +18,16 @@ import MModal from './components/MModal/MModal';
 
 function App(props){
 	const [users, setUsers] = useState([]);
-	//useEffect(()=>{
-	//	axios.get("http://localhost:5050/usuarios").then((response)=>{
-	//		console.log(response.data.data);
-	//		setUsers(response.data.data);
-	//	});
-	//});
+	const [user, setUser] = useState([]);
+	useEffect(()=>{
+		axios.get("http://localhost:5050/usuarios/3").then((response)=>{
+			//console.log(response.data.data);
+			setUsers(response.data.data);
+		});
+		axios.get("http://localhost:5050/usuarios/3").then((response)=>{
+			setUser(response.data.data);
+		});
+	});
 	useEffect(()=>{
 		var paginas = document.getElementsByClassName('spages');
 		new simpleParallax(paginas, {
@@ -67,20 +71,17 @@ function App(props){
 				</div>
 			</div>
 			{props.showLogin ?
-				<MModal>
-					<div className='login'>
-					<MLoginBox/>
-					</div>
-				</MModal>
-					
-				
-
+				<div className='login'>
+				<MLoginBox/>
+				</div>
 				:
 				null
 			}
-			{/*users.map(user => {
-					return <div key={user.codigo_usuario}>{user.codigo_usuario}{" "}{user.nombre}{" "}{user.email}</div>
-				})*/}
+			{users.map(usuario => {
+					return <div key={usuario.codigo_usuario}>{usuario.codigo_usuario}{" "}{usuario.nombre}{" "}{usuario.email}</div>
+				})}
+			 {/*<div key={user.codigo_usuario}>{user.codigo_usuario}{" "}{user.nombre}{" "}{user.email}</div>
+				*/}
 		</div>
 	);
 }
