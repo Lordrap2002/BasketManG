@@ -13,9 +13,9 @@ export const setUsuario = (user) => (dispatch) => {
     })
 }
 
-export const setEnter = (enter) => (dispatch) => {
+export const setLoadedData = (loadedData) => (dispatch) => {
     dispatch({
-        type: "SET_ENTER",
-        payload: {enter}
+        type: "SET_LOADEDDATA",
+        payload: {loadedData}
     })
 }

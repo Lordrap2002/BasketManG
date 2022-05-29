@@ -3,7 +3,7 @@ import "./MLoginBox.css";
 import axios from 'axios';
 import React from 'react';
 import { useState, useEffect} from 'react';
-import {setUsuario, setShowLogin, setEnter} from "../../store/actions/ui";
+import {setUsuario, setShowLogin, setLoadedData} from "../../store/actions/ui";
 import {connect} from "react-redux";
 
 function MLoginBox(props){
@@ -13,7 +13,7 @@ function MLoginBox(props){
   const actualizarInput1 = char => {setInput1(char.target.value);};
   const [input2, setInput2] = useState('');
   const actualizarInput2 = char => {setInput2(char.target.value);};
-  const [user, setUser] = useState(-1);
+  const [usuario, setUser] = useState(-1);
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
@@ -22,24 +22,18 @@ function MLoginBox(props){
 		  });
   });
 
-  useEffect(() => {
-    if(props.enter){
-      props.setEnter(false);
-      for (var i = 0; i < users.length; i++){
-        if (users[i].email === input1 && users[i].contraseña === input2){
-          setUser(users[i].codigo_usuario);
-        }
+  function login(){
+    var u = -1;
+    for (var i = 0; i < users.length; i++){
+      if (users[i].email === input1 && users[i].contraseña === input2){
+        setUser(users[i].codigo_usuario);
+        u = users[i].codigo_usuario;
       }
-      if(user !== -1){
-        props.setUsuario(user);
-        props.setShowLogin(false);
-      } 
-      
     }
-  }, [enter, input1, input2, users, user]);
-
-  function onLogin(){
-    
+    if(u !== -1){
+      props.setUsuario(u);
+      props.setShowLogin(false);
+    }
   }
 
   return(
@@ -69,7 +63,7 @@ function MLoginBox(props){
             </button>
           </div>
           <div className='mLoginRegister-action-button-container'>
-            <button className='mLoginRegister-action-button' onClick={() => props.setEnter(true)}>
+            <button className='mLoginRegister-action-button' onClick={() => login()}>
               INICIA SESIÓN
             </button>
           </div>
@@ -99,14 +93,14 @@ function MLoginBox(props){
 const mapActionsToProps = {
   setUsuario,
   setShowLogin,
-  setEnter
+  setLoadedData
 };
 
 const mapStatesToProps = (state) => {
 	return{
 		user: state.uiReducer.user,
-    enter: state.uiReducer.enter,
-    showLogin: state.uiReducer.showLogin
+    showLogin: state.uiReducer.showLogin,
+    loadedData: state.uiReducer.loadedData
 	};
 }
 

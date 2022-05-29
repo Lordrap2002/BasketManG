@@ -11,32 +11,33 @@ function MJUBox(props){
 		if(props.user !== -1){
 			axios.get("http://localhost:5050/datos_jugadores/" + props.user).then((response)=>{
 				setDatos(response.data);
+        var data = response.data;
+        var minP = 0, minA = 0, minD = 0, minR = 0, minN = 0;
+        var rP = '', rA = '', rD = '', rR = '', rN = '';
+        for(var i = 0; i < data.length; i++){
+          if(data[i].precio > minP){
+            minP = data[i].precio;
+            rP = data[i].nombre;
+          }
+          if(data[i].ataque > minA){
+            minA = data[i].ataque;
+            rA = data[i].nombre;
+          }
+          if(data[i].defensa > minD){
+            minD = data[i].defensa;
+            rD = data[i].nombre;
+          }
+          if(data[i].resistencia > minR){
+            minR = data[i].resistencia;
+            rR = data[i].nombre;
+          }
+          if(data[i].poder > minN){
+            minN = data[i].poder;
+            rN = data[i].nombre;
+          }
+        }
+        setResult([rP,rA,rD,rR,rN]);
 			});
-      var minP = 0, minA = 0, minD = 0, minR = 0, minN = 0;
-      var rP = '', rA = '', rD = '', rR = '', rN = '';
-      for(var i = 0; i < datos.length; i++){
-        if(datos[i].precio > minP){
-          minP = datos[i].precio;
-          rP = datos[i].nombre;
-        }
-        if(datos[i].ataque > minA){
-          minA = datos[i].ataque;
-          rA = datos[i].nombre;
-        }
-        if(datos[i].defensa > minD){
-          minD = datos[i].defensa;
-          rD = datos[i].nombre;
-        }
-        if(datos[i].resistencia > minR){
-          minR = datos[i].resistencia;
-          rR = datos[i].nombre;
-        }
-        if(datos[i].poder > minN){
-          minN = datos[i].poder;
-          rN = datos[i].nombre;
-        }
-      }
-      setResult([rP,rA,rD,rR,rN]);
 		}
 	  }, [props.user]);
   return(

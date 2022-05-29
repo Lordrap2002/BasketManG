@@ -8,21 +8,20 @@ function MEQBox(props){
   const [datos, setDatos] = useState([]);
   const [result, setResult] = useState([0,0,0,0]);
 	useEffect(() => {
-		if(props.user !== -1){
-			axios.get("http://localhost:5050/datos_jugadores/" + props.user).then((response)=>{
-				setDatos(response.data);
-			});
+    axios.get("http://localhost:5050/datos_jugadores/" + props.user).then((response)=>{
+      setDatos(response.data);
+      var data = response.data;
       var rP = 0, rA = 0, rD = 0, rR = 0, rN = 0;
-      for(var i = 0; i < datos.length; i++){      
-          rP = rP + datos[i].precio;
-          rA = rA + datos[i].ataque;
-          rD = rD + datos[i].defensa;
-          rR = rR + datos[i].resistencia;     
-          rN = rN + datos[i].poder;
+      for(var i = 0; i < data.length; i++){      
+          rP = rP + data[i].precio;
+          rA = rA + data[i].ataque;
+          rD = rD + data[i].defensa;
+          rR = rR + data[i].resistencia;     
+          rN = rN + data[i].poder;
       }
-      rN = rN / datos.length;
+      rN = rN / data.length;
       setResult([rP,rA,rD,rR,rN]);
-		}
+    });
 	  }, [props.user]);
   return(
     <nav className="EQbox">

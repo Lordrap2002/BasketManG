@@ -3,7 +3,7 @@ const INITIAL_STATE = {
     text: 'Hola React Redux!',
     showLogin: false,
     user: -1, //-1 para no iniciar sesión, 1 para iniciar sesión
-    enter: false
+    loadedData: false
 };
 
 const uiReducer = (state = INITIAL_STATE, action) => {
@@ -17,12 +17,12 @@ const uiReducer = (state = INITIAL_STATE, action) => {
             return{
                 ...state,
                 user: action.payload.user,
-            }; 
-        case "SET_ENTER":
+            };
+        case "SET_LOADEDDATA":
             return{
                 ...state,
-                enter: action.payload.enter,
-            }; 
+                loadedData: action.payload.loadedData,
+            };
         default:
             return state;
     }
