@@ -8,13 +8,13 @@ function MPBox(props){
         Equipo
       </div>
       <div className="spitems">
-        <MTButton className="sbutton"></MTButton>
-        <MTButton className="sbutton"></MTButton>
-        <MTButton className="sbutton"></MTButton>
-        <MTButton className="sbutton"></MTButton>
-        <MTButton className="sbutton"></MTButton>
-        <MTButton className="sbutton"></MTButton>
-        <MTButton className="sbutton"></MTButton>
+        <MTButton className="sbutton" text="Nombre"></MTButton>
+        <MTButton className="sbutton" text="Color Representativo"></MTButton>
+        <MTButton className="sbutton" text="Escudo"></MTButton>
+        <MTButton className="sbutton" text="Oufit Representativo"></MTButton>
+        <MTButton className="sbutton" text="Alineación"></MTButton>
+        <MTButton className="sbutton" text="Tamaño iconos"></MTButton>
+        <MTButton className="sbutton" text="País Representativo"></MTButton>
       </div>
     </nav>
   );
