@@ -1,5 +1,8 @@
 import "./MEQBox.css"
 import MTButton from "../MButton/MTButton";
+import axios from 'axios';
+import {connect} from "react-redux";
+import { useState, useEffect} from 'react';
 
 function MEQBox(props){
   return(
@@ -7,15 +10,27 @@ function MEQBox(props){
       <div className="EQtitle">
         Equipo
       </div>
-      <div className="EQitems">
-      <MTButton className="hbutton"></MTButton>
+      {props.user !== -1 ?
+        <div className="EQitems">
         <MTButton className="hbutton"></MTButton>
-        <MTButton className="hbutton"></MTButton>
-        <MTButton className="hbutton"></MTButton>
-        <MTButton className="hbutton"></MTButton>
-      </div>
+          <MTButton className="hbutton"></MTButton>
+          <MTButton className="hbutton"></MTButton>
+          <MTButton className="hbutton"></MTButton>
+          <MTButton className="hbutton"></MTButton>
+        </div>
+        :
+        <div>
+          Inicia sesión primero
+        </div>
+        }
     </nav>
   );
 }
 
-export default MEQBox;
+const mapStatesToProps = (state) => {
+	return{
+		user: state.uiReducer.user
+	};
+}
+
+export default connect(mapStatesToProps)(MEQBox);

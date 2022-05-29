@@ -1,5 +1,8 @@
 import "./MRBox.css"
 import MTButton from "../MButton/MTButton";
+import axios from 'axios';
+import {connect} from "react-redux";
+import { useState, useEffect} from 'react';
 
 function MRBox(props){
   return(
@@ -7,15 +10,27 @@ function MRBox(props){
       <div className="Rtitle">
         Rendimiento
       </div>
-      <div className="Ritems">
-      <MTButton className="hbutton"></MTButton>
+      {props.user !== -1 ?
+        <div className="Ritems">
         <MTButton className="hbutton"></MTButton>
-        <MTButton className="hbutton"></MTButton>
-        <MTButton className="hbutton"></MTButton>
-        <MTButton className="hbutton"></MTButton>
-      </div>
+          <MTButton className="hbutton"></MTButton>
+          <MTButton className="hbutton"></MTButton>
+          <MTButton className="hbutton"></MTButton>
+          <MTButton className="hbutton"></MTButton>
+        </div>
+        :
+        <div>
+          Inicia sesión primero
+        </div>
+        }
     </nav>
   );
 }
 
-export default MRBox;
+const mapStatesToProps = (state) => {
+	return{
+		user: state.uiReducer.user
+	};
+}
+
+export default connect(mapStatesToProps)(MRBox);
