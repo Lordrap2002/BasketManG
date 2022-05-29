@@ -8,15 +8,15 @@ function MRBox(props){
   return(
     <nav className="Rbox">
       <div className="Rtitle">
-        Rendimiento
+        Usuario
       </div>
       {props.user !== -1 ?
         <div className="Ritems">
-        <MTButton className="hbutton"></MTButton>
-          <MTButton className="hbutton"></MTButton>
-          <MTButton className="hbutton"></MTButton>
-          <MTButton className="hbutton"></MTButton>
-          <MTButton className="hbutton"></MTButton>
+        <MTButton className="hbutton" text="Porcetaje de victorias: 65%."></MTButton>
+          <MTButton className="hbutton" text="Partidos jugados: 23."></MTButton>
+          <MTButton className="hbutton" text="Puntaje máximo: 4358."></MTButton>
+          <MTButton className="hbutton" text="Liga actual: Plata II."></MTButton>
+          <MTButton className="hbutton" text="Nivel: 8."></MTButton>
         </div>
         :
         <div>

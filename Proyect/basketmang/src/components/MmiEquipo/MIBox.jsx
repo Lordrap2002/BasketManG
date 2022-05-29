@@ -10,7 +10,6 @@ function MIBox(props){
 		if(props.user !== -1){
 			axios.get("http://localhost:5050/jugadores_usuario/" + props.user).then((response)=>{
 				setFotos(response.data);
-        console.log(1)
 			});
 		}
 	  }, [props.user]);

@@ -106,6 +106,23 @@ app.get("/jugadores_usuario/:codigo_usuario", (req, res) =>{
     });
 });
 
+app.get("/datos_jugadores/:codigo_usuario", (req, res) =>{
+    let codigo_usuario = req.params.codigo_usuario;
+    let values = [codigo_usuario];
+    let sql = 'SELECT ju.nombre, ju.ataque, ju.defensa, ju.resistencia, ju.poder, ju.precio, ju.codigo_jugador FROM "Usuarios" AS us INNER JOIN "Usuarios_Jugadores" AS uj ON us.codigo_usuario=uj.codigo_usuario INNER JOIN "Jugadores" AS ju ON ju.codigo_jugador=uj.codigo_jugador WHERE us.codigo_usuario = $1';
+    dbClient.query(sql, values, (error, db_response) =>{
+        let responseData = {};
+        if (error){
+            responseData = {data: null, status: 500, message: "Error interno de la db."};
+        }else if (db_response.rows.length === 0){
+            responseData = {data: [], status: 404, message: "No se encontraron registros."};
+        }else{
+            responseData = {data: db_response.rows, status: 200, message: "Usuario encontrado exitosamente."};
+        }
+        res.json(responseData.data);
+    });
+});
+
 app.post("/user", (req, res) => {
     res.json({status: 200, message: "El usuario se guardó correctamente en la base de datos"});
 });

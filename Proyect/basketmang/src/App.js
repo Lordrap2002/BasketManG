@@ -25,7 +25,7 @@ function App(props){
 			setUsers(response.data.data);
 		});
 	});
-	useEffect(()=>{
+	/*useEffect(()=>{
 		var paginas = document.getElementsByClassName('spages');
 		new simpleParallax(paginas, {
 			scale: 2,
@@ -33,7 +33,7 @@ function App(props){
 			orientation: 'up',
 			overflow: true,
 			transition: 'cubic-bezier(0,0,0,1)'});
-	});
+	});*/
 
 	return(
 		<div className="App">

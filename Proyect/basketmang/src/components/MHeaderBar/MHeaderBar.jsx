@@ -9,10 +9,10 @@ function MHeaderBar(props){
 	const [userName, setUserName] = useState('');
 	useEffect(() => {
 		if(props.user !== -1){
-			//axios.get("http://localhost:5050/nombre_usuario/" + props.user).then((response)=>{
-				//setUserName(response.data);
-			//});
-			setUserName("prueba");
+			axios.get("http://localhost:5050/nombre_usuario/" + props.user).then((response)=>{
+				setUserName(response.data);
+			});
+			//setUserName("prueba");
 		}
 	  }, [props.user]);
 	return(
