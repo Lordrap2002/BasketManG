@@ -13,7 +13,7 @@ function MHome(props){
 				<MPartidoButton buttonName="PARTIDO" to='/partido'/>
 			</div>
 			<div className='hmiddle2'>
-				<MMenuButton buttonName="¿Necesitas ayuda?" to='/help'/>
+				<MMenuButton buttonName="¿Necesitas ayuda?" to='/help' className='myButton2'/>
 			</div>	
 		</div>
 	)

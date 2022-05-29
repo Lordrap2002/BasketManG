@@ -13,8 +13,9 @@ import MmiEquipo from './pages/MmiEquipo';
 import MEstadisticas from './pages/MEstadisticas';
 import MPartido from './pages/MPartido';
 import simpleParallax from 'simple-parallax-js';
-import MTButton from './components/MButton/MTButton';
+import MMenuButton from './components/MMenuButton';
 import MModal from './components/MModal/MModal';
+import {setShowLogin} from "./store/actions/ui";
 
 function App(props){
 	const [users, setUsers] = useState([]);
@@ -33,6 +34,7 @@ function App(props){
 			overflow: true,
 			transition: 'cubic-bezier(0,0,0,1)'});
 	});
+
 	return(
 		<div className="App">
 			<div className='home'>
@@ -67,9 +69,20 @@ function App(props){
 				</div>
 			</div>
 			{props.showLogin ?
-				<div className='login'>
-				<MLoginBox/>
-				</div>
+				props.user === -1 ?
+					<div className='login'>
+						<MLoginBox/>
+					</div>
+					:
+					<div className='login'>
+						<MMenuButton buttonName='¿Cerrar Sesión?' className='logOut1'/>
+						<button className='logOut2' onClick={() => window.location.reload()}>
+							Aceptar
+						</button>
+						<button className='logOut2' onClick={() => props.setShowLogin(false)}>
+							Cancelar
+						</button>
+					</div>
 				:
 				null
 			}
@@ -83,6 +96,10 @@ function App(props){
 	);
 }
 
+const mapActionsToProps = {
+	setShowLogin
+  };
+
 const mapStatesToProps = (state) => {
 	return{
 		showLogin: state.uiReducer.showLogin,
@@ -90,7 +107,7 @@ const mapStatesToProps = (state) => {
 	};
 }
 
-export default connect(mapStatesToProps)(App);
+export default connect(mapStatesToProps,mapActionsToProps)(App);
 
 /*onHeaderBarLoginClicked={() => {onLoginButtonClicked();}}
 const [showLogin, setShowLogin] = useState(false);

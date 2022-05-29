@@ -12,3 +12,10 @@ export const setUsuario = (user) => (dispatch) => {
         payload: {user}
     })
 }
+
+export const setEnter = (enter) => (dispatch) => {
+    dispatch({
+        type: "SET_ENTER",
+        payload: {enter}
+    })
+}

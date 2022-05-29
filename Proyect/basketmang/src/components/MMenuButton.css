@@ -22,3 +22,14 @@
 .myButton2-text:hover{
     color: rgb(66, 80, 209);
 }
+
+.logOut1{
+    width: 30%;
+    height: 20vh;
+  }
+
+.logOut2{
+    width: 30%;
+    height: 20vh;
+    background-color: lightyellow;
+}

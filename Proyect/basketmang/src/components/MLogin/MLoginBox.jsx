@@ -4,7 +4,7 @@ import axios from 'axios';
 import React from 'react';
 import { useState, useEffect} from 'react';
 import {Link} from "react-router-dom";
-import {setUsuario} from "../../store/actions/ui";
+import {setUsuario, setShowLogin, setEnter} from "../../store/actions/ui";
 import {connect} from "react-redux";
 
 function MLoginBox(props){
@@ -24,30 +24,31 @@ function MLoginBox(props){
   });
 
   useEffect(() => {
-    if(enter){
-      setEnter(false);
+    if(props.enter){
+      props.setEnter(false);
       for (var i = 0; i < users.length; i++){
         if (users[i].email === input1 && users[i].contraseña === input2){
           setUser(users[i].codigo_usuario);
         }
       }
       if(user !== -1){
-        onLogin();
+        props.setUsuario(user);
+        props.setShowLogin(false);
       } 
       
     }
   }, [enter, input1, input2, users, user]);
 
   function onLogin(){
-    props.setUsuario(user);
+    
   }
 
   return(
     <div className='mLoginRegister-container'>
-      <button className='mLoginRegister-button mLoginRegister-button-selected'>
+      <button className= {register ? 'mLoginRegister-button' : 'mLoginRegister-button mLoginRegister-button-selected'} onClick={() => setRegister(false)}>
         INICIA SESIÓN
       </button>
-      <button className='mLoginRegister-button'>
+      <button className= {!register ? 'mLoginRegister-button' : 'mLoginRegister-button mLoginRegister-button-selected'} onClick={() => setRegister(true)}>
         REGÍSTRATE
       </button>
       {
@@ -69,7 +70,7 @@ function MLoginBox(props){
             </button>
           </div>
           <div className='mLoginRegister-action-button-container'>
-            <button className='mLoginRegister-action-button' onClick={() => setEnter(true)}>
+            <button className='mLoginRegister-action-button' onClick={() => props.setEnter(true)}>
               INICIA SESIÓN
             </button>
           </div>
@@ -78,13 +79,13 @@ function MLoginBox(props){
         <div className='mLoginRegister-input-container'>
           <input 
             className='mLoginRegister-input'
-            placeholder='Ingresa el nombre de tu jugador'/>
+            placeholder='Crea tu nombre de usuario'/>
           <input
             className='mLoginRegister-input'
             placeholder='Ingresa tu dirección de correo electrónico'/>
           <input 
             className='mLoginRegister-input'
-            placeholder='Ingresa tu contraseña'/>
+            placeholder='Crea tu contraseña'/>
           <div className='mLoginRegister-action-button-container'>
             <button className='mLoginRegister-action-button'>
               REGÍSTRATE
@@ -97,12 +98,16 @@ function MLoginBox(props){
 }
 
 const mapActionsToProps = {
-  setUsuario
+  setUsuario,
+  setShowLogin,
+  setEnter
 };
 
 const mapStatesToProps = (state) => {
 	return{
-		user: state.uiReducer.user
+		user: state.uiReducer.user,
+    enter: state.uiReducer.enter,
+    showLogin: state.uiReducer.showLogin
 	};
 }
 

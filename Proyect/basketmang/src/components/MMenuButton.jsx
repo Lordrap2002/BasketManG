@@ -6,7 +6,7 @@ function MMenuButton(props){
   function onButtonClick(){
   }
   return(
-    <button className='myButton2' onClick={() => {onButtonClick();}}>
+    <button className={props.className} onClick={() => {onButtonClick();}}>
       { props.href ?
         <a
           className='myButton-text'

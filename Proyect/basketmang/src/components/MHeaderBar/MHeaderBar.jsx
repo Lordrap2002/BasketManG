@@ -30,7 +30,7 @@ function MHeaderBar(props){
 				className='mHeaderBar-logo'
 				src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Basketball_Clipart.svg/240px-Basketball_Clipart.svg.png'/>
 			</div>
-			<div className='mHeaderBar-rightContainer'>
+			<div className='mHeaderBar-rightContainer' >
 				{props.user !== -1 ?
 				<MLoginButton buttonName={userName}/>
 				:
