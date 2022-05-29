@@ -1,22 +1,43 @@
 import "./MIBox.css"
 import MFButton from "../MButton/MFButton";
+import axios from 'axios';
+import {connect} from "react-redux";
+import { useState, useEffect} from 'react';
 
 function MIBox(props){
+  const [fotos, setFotos] = useState([]);
+	useEffect(() => {
+		if(props.user !== -1){
+			axios.get("http://localhost:5050/jugadores_usuario/" + props.user).then((response)=>{
+				setFotos(response.data);
+        console.log(1)
+			});
+		}
+	  }, [props.user]);
   return(
     <nav className="tIbox">
       <div className="tItitle">
         Inventario
       </div>
-      <div className="tIitems">
-        <MFButton className="ebutton" url="https://www.kreedon.com/wp-content/uploads/2019/06/Satnam-Singh-kreedon-1200x900.png"></MFButton>
-        <MFButton className="ebutton" url="https://png.pngitem.com/pimgs/s/311-3112911_lebron-james-download-png-image-transparent-png.png"></MFButton>
-        <MFButton className="ebutton" url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8Jlll7iz4pHOCCTz291JqQw1ydt00LdAysg&usqp=CAU"></MFButton>
-        <MFButton className="ebutton" url="https://www.kindpng.com/picc/m/167-1675094_nba-player-png-basketball-player-transparent-background-png.png"></MFButton>
-        <MFButton className="ebutton" url="https://png.pngitem.com/pimgs/s/143-1435130_nba-player-png-transparent-png.png"></MFButton>
-        <MFButton className="ebutton" url="https://smallimg.pngkey.com/png/small/50-504490_nba-on-tnt-on-twitter-mixed-together-nba.png"></MFButton>
-      </div>
+      {props.user !== -1 ?
+        <div className="tIitems">
+          {fotos.map(f => {
+            return <MFButton key={f.codigo_jugador} className="ebutton" url={f.foto}></MFButton>
+          })}
+        </div>
+        :
+        <div>
+          Inicia sesión primero
+        </div>
+        }
     </nav>
   );
 }
 
-export default MIBox;
+const mapStatesToProps = (state) => {
+	return{
+		user: state.uiReducer.user
+	};
+}
+
+export default connect(mapStatesToProps)(MIBox);

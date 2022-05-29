@@ -1,21 +1,44 @@
 import "./MJIBox.css"
 import MFButton from "../MButton/MFButton";
+import axios from 'axios';
+import {connect} from "react-redux";
+import { useState, useEffect} from 'react';
 
 function MJIBox(props){
+  const [fotos, setFotos] = useState([]);
+	useEffect(() => {
+		if(props.user !== -1){
+			axios.get("http://localhost:5050/jugadores_usuario/" + props.user).then((response)=>{
+				setFotos(response.data);
+        console.log(1)
+			});
+		}
+	}, [props.user]);
+
   return(
     <nav className="tJIbox">
       <div className="tJItitle">
         Jugadores Iniciales
       </div>
-      <div className="tJIitems">
-        <MFButton className="ebutton" url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNtPwjZseTEgOckZE6-Np6aBBbosC02s6ybw&usqp=CAU"></MFButton>
-        <MFButton className="ebutton" url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxe3IfNEaTHMsoYyLj7mXZRkiapvwzfn3Suw&usqp=CAU"></MFButton>
-        <MFButton className="ebutton" url="https://p.kindpng.com/picc/s/311-3112906_nba-players-png-transparent-png.png"></MFButton>
-        <MFButton className="ebutton" url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9DSFMZ6aw-9s9iyqVSPu9fddYCbHZem5RA4ZNpkBcvIK8_Vgec8eML2eiOL8RaZaS7DU&usqp=CAU"></MFButton>
-        <MFButton className="ebutton" url="https://p.kindpng.com/picc/s/123-1230397_toronto-basketball-player-team-nba-sport-raptors-toronto.png"></MFButton>
-      </div>
+      {props.user !== -1 ?
+        <div className="tJIitems">
+          {fotos.map(f => {
+            return <MFButton key={f.codigo_jugador} className="ebutton" url={f.foto}></MFButton>
+          })}
+        </div>
+        :
+        <div>
+          Inicia sesión primero
+        </div>
+        }
     </nav>
   );
 }
 
-export default MJIBox;
+const mapStatesToProps = (state) => {
+	return{
+		user: state.uiReducer.user
+	};
+}
+
+export default connect(mapStatesToProps)(MJIBox);
