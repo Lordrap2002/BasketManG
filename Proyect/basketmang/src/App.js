@@ -79,7 +79,7 @@ function App(props){
 						<button className='logOut2' onClick={() => window.location.reload()}>
 							Aceptar
 						</button>
-						<button className='logOut2' onClick={() => props.setShowLogin(false)}>
+						<button className='logOut3' onClick={() => props.setShowLogin(false)}>
 							Cancelar
 						</button>
 					</div>

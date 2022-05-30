@@ -37,7 +37,7 @@ function MEQBox(props){
           <MTButton className="hbutton" text={"Nivel promedio: " + result[4]}></MTButton>
         </div>
         :
-        <div>
+        <div className="tNoLogin">
           Inicia sesión primero
         </div>
         }

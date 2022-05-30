@@ -10,16 +10,12 @@ function MmiEquipo(){
 		<div className='estyle'>
 			<MTitulo className="tituloMiEquipo" nombre="Mi Equipo"></MTitulo>
 			<div className='ebottom'>
-				<div className='eright'>
 				<MJIBox></MJIBox>
 				<MJBBox></MJBBox>
-				</div>
-				<div className='eleft'>
 				<MIBox></MIBox>
-				</div>
-				
 			</div>
 		</div>
+		
 	)
 }
 

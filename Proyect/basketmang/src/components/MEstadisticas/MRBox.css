@@ -27,3 +27,9 @@
     align-content: space-between;
     justify-content: space-between;
 }
+
+.tNoLogin{
+    font-size: 40px;
+    font-style: italic;
+    color:azure;
+}

@@ -24,12 +24,32 @@
 }
 
 .logOut1{
+    top: -150px;
+    left: 230px;
     width: 30%;
     height: 20vh;
-  }
+    border-top: white 8px outset;
+    border-left: white 8px outset;
+    border-right: white 8px outset;
+}
 
 .logOut2{
-    width: 30%;
+    top: -7px;
+    right: 226px;
+    width: 15%;
     height: 20vh;
-    background-color: lightyellow;
+    border-bottom: white 8px outset;
+    border-left: white 8px outset;
+    border-right: black 20px;
+    
+}
+
+.logOut3 {
+    top: -7px;
+    right: 226px;
+    width: 15%;
+    height: 20vh;
+    border-bottom: white 8px outset;
+    border-right: white 8px outset;
+    border-left: black 20px;
 }

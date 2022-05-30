@@ -32,3 +32,9 @@
     height: 300px;
     width: 3cm;
 }
+
+.tNoLogin{
+    font-size: 40px;
+    font-style: italic;
+    color:azure;
+}

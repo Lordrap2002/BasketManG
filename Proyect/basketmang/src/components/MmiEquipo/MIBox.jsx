@@ -25,7 +25,7 @@ function MIBox(props){
           })}
         </div>
         :
-        <div>
+        <div className="tNoLogin">
           Inicia sesión primero
         </div>
         }

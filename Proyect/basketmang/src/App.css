@@ -59,6 +59,75 @@
   font-size: larger;
 }
 
+.logOut1 {
+  background-color: #5ca1e1;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 32px;
+  padding: 16px;
+  width: 220px;
+  transition: all 0.5s;
+  cursor: pointer;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.5s;
+  position: relative;
+}
+
+
+
+
+.logOut2 {
+  color: red!important;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 0.5em 1.2em;
+  background: white;
+  border:#282c34;
+  border-color: #318aac;
+  position: relative;
+}
+
+.logOut2:before {
+  content:"";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0px;
+  height: 100%;
+  background: rgba(122, 63, 63, 0.1);
+  transition: all 1s ease;
+}
+.logOut2:hover:before {
+width: 100%;
+}
+
+.logOut3 {
+  color: black !important;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 0.5em 1.2em;
+  background: white;
+  border:#282c34;
+  position: relative;
+}
+
+.logOut3:before {
+  content:"";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0px;
+  height: 100%;
+  background: rgba(122, 63, 63, 0.1);
+  transition: all 1s ease;
+}
+.logOut3:hover:before {
+width: 100%;
+}
+
 .App {
   text-align: center;
 }

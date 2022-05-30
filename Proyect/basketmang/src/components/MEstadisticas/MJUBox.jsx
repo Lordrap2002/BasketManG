@@ -54,7 +54,7 @@ function MJUBox(props){
           <MTButton className="hbutton" text={"Jugador de mayor nivel: " + result[4]}></MTButton>
         </div>
         :
-        <div>
+        <div className="tNoLogin">
           Inicia sesión primero
         </div>
         }

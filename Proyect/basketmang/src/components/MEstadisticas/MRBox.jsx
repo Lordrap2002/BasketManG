@@ -19,7 +19,7 @@ function MRBox(props){
           <MTButton className="hbutton" text="Nivel: 8."></MTButton>
         </div>
         :
-        <div>
+        <div className="tNoLogin">
           Inicia sesión primero
         </div>
         }

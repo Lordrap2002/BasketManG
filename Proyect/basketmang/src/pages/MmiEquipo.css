@@ -9,11 +9,14 @@
     display: flex;
     justify-content: space-between;
     height: calc(100vh - 80%);
+    width: 100%;
+    padding: 0px 35px;
 }
 
 .eright{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    margin-left: 5px;
 }
 
 .eleft{
