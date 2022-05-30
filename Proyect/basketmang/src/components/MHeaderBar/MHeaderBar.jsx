@@ -10,7 +10,7 @@ function MHeaderBar(props){
 	useEffect(() => {
 		if(props.user !== -1){
 			axios.get("http://localhost:5050/nombre_usuario/" + props.user).then((response)=>{
-				setUserName(response.data);
+				setUserName(response.data[0].nombre);
 			});
 			//setUserName("prueba");
 		}
