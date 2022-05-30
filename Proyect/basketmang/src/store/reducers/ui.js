@@ -3,7 +3,10 @@ const INITIAL_STATE = {
     text: 'Hola React Redux!',
     showLogin: false,
     user: -1, //-1 para no iniciar sesión, 1 para iniciar sesión
-    loadedData: false
+    loadedData: false,
+    precio: 0,
+    showComprar: false,
+    jugador: 0
 };
 
 const uiReducer = (state = INITIAL_STATE, action) => {
@@ -22,6 +25,21 @@ const uiReducer = (state = INITIAL_STATE, action) => {
             return{
                 ...state,
                 loadedData: action.payload.loadedData,
+            };
+        case "SET_SHOWCOMPRAR":
+            return{
+                ...state,
+                showComprar: action.payload.showComprar,
+            };
+        case "SET_PRECIO":
+            return{
+                ...state,
+                precio: action.payload.precio,
+            };
+        case "SET_JUGADOR":
+            return{
+                ...state,
+                jugador: action.payload.jugador,
             };
         default:
             return state;

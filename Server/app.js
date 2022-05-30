@@ -140,6 +140,21 @@ app.get("/datos_jugadores/:codigo_usuario", (req, res) =>{
     });
 });
 
+app.get("/fotosPrecio_jugadores", (req, res) =>{
+    let sql = 'SELECT ju.foto, ju.precio, ju.codigo_jugador FROM "Jugadores" AS ju';
+    dbClient.query(sql, (error, db_response) =>{
+        let responseData = {};
+        if (error){
+            responseData = {data: null, status: 500, message: "Error interno de la db."};
+        }else if (db_response.rows.length === 0){
+            responseData = {data: [], status: 404, message: "No se encontraron registros."};
+        }else{   
+            responseData = {data: db_response.rows, status: 200, message: "Usuario encontrado exitosamente."};
+        }   
+        res.json(responseData.data);
+    });
+});
+
 app.get("/create_user/:nombre/:email/:contra/:code", (req, res) =>{
     let n = req.params.nombre;
     let e = req.params.email; 
@@ -171,6 +186,33 @@ app.get("/comprar_jugador/:us/:ju/:num", (req, res) =>{
             responseData = {status: 200, message: "La comprar se efectuo correctamente en la base de datos"};   
         }
         res.json(responseData.message);
+    });
+});
+
+app.get("/quitar_dinero/:us/:valor", (req, res) =>{
+    let us = req.params.us;
+    let ju = req.params.valor;
+    let values = [us,ju];
+    let sql = 'UPDATE "Usuarios" AS us SET dinero = us.dinero - $2 WHERE us.codigo_usuario = $1';
+    dbClient.query(sql, values, (error, db_response) =>{
+        if (error){  
+            responseData = { status: 500, message: "Error interno de la db."};
+        }else{
+            responseData = {status: 200, message: "La comprar se efectuo correctamente en la base de datos"};   
+        }
+        res.json(responseData.message);
+    });
+});
+
+app.get("/enlace", (req, res) =>{
+    let sql = 'SELECT * FROM "Usuarios_Jugadores"';
+    dbClient.query(sql, (error, db_response) =>{
+        if (error){  
+            responseData = { status: 500, message: "Error interno de la db."};
+        }else{
+            responseData = {data: db_response.rows, status: 200, message: "La comprar se efectuo correctamente en la base de datos"};   
+        }
+        res.json(responseData.data);
     });
 });
 

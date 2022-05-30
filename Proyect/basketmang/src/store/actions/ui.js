@@ -19,3 +19,24 @@ export const setLoadedData = (loadedData) => (dispatch) => {
         payload: {loadedData}
     })
 }
+
+export const setShowComprar = (showComprar) => (dispatch) => {
+    dispatch({
+        type: "SET_SHOWCOMPRAR",
+        payload: {showComprar}
+    })
+}
+
+export const setPrecio = (precio) => (dispatch) => {
+    dispatch({
+        type: "SET_PRECIO",
+        payload: {precio}
+    })
+}
+
+export const setJugador = (jugador) => (dispatch) => {
+    dispatch({
+        type: "SET_JUGADOR",
+        payload: {jugador}
+    })
+}

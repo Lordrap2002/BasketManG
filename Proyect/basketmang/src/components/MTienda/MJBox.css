@@ -39,3 +39,27 @@
     width: 100px;
     height: 100px;
 }
+
+.compra{
+    background-color: rgb(255, 153, 0);
+    height: 100px;
+    width: 100%;
+    font-size: 30px;
+    display: center;
+    justify-content: space-between;
+    color: black;
+    top: -200px;
+    position: relative;
+}
+
+.compra{
+    background-color: rgb(255, 153, 0);
+    height: 50px;
+    width: 100%;
+    font-size: 30px;
+    display: center;
+    justify-content: space-between;
+    color: black;
+    top: -200px;
+    position: relative;
+}
