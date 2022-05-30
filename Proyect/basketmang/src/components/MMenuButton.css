@@ -24,10 +24,11 @@
 }
 
 .logOut1{
+    position: relative;
     top: -150px;
     left: 230px;
-    width: 30%;
-    height: 20vh;
+    width: 12cm;
+    height: 4cm;
     border-top: white 8px outset;
     border-left: white 8px outset;
     border-right: white 8px outset;
@@ -36,8 +37,8 @@
 .logOut2{
     top: -7px;
     right: 226px;
-    width: 15%;
-    height: 20vh;
+    width: 6cm;
+    height: 3.8cm;
     border-bottom: white 8px outset;
     border-left: white 8px outset;
     border-right: black 20px;
@@ -47,8 +48,8 @@
 .logOut3 {
     top: -7px;
     right: 226px;
-    width: 15%;
-    height: 20vh;
+    width: 6.05cm;
+    height: 3.8cm;
     border-bottom: white 8px outset;
     border-right: white 8px outset;
     border-left: black 20px;
