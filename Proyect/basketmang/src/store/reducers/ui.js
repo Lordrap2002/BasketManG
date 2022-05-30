@@ -2,7 +2,7 @@
 const INITIAL_STATE = {
     text: 'Hola React Redux!',
     showLogin: false,
-    user: 1, //-1 para no iniciar sesión, 1 para iniciar sesión
+    user: -1, //-1 para no iniciar sesión, 1 para iniciar sesión
     loadedData: false
 };
 
