@@ -52,7 +52,8 @@ function App(props){
 						<Route exact path='/estadisticas' element={<MEstadisticas/>}/>
 						<Route exact path='/partido' element={<MPartido/>}/>
 					</Routes>
-				</div>
+				</div> 
+				
 			</div>
 			<div className='footer'>
 				<div className='fooitems'>
@@ -70,19 +71,23 @@ function App(props){
 			</div>
 			{props.showLogin ?
 				props.user === -1 ?
+				<MModal>
 					<div className='login'>
 						<MLoginBox/>
 					</div>
+				</MModal>
 					:
-					<div className='login'>
-						<MMenuButton buttonName='¿Cerrar Sesión?' className='logOut1'/>
-						<button className='logOut2' onClick={() => window.location.reload()}>
-							Aceptar
-						</button>
-						<button className='logOut3' onClick={() => props.setShowLogin(false)}>
-							Cancelar
-						</button>
-					</div>
+					<MModal>
+						<div className='login'>
+							<MMenuButton buttonName='¿Cerrar Sesión?' className='logOut1'/>
+							<button className='logOut2' onClick={() => window.location.reload()}>
+								Aceptar
+							</button>
+							<button className='logOut3' onClick={() => props.setShowLogin(false)}>
+								Cancelar
+							</button>
+						</div>
+					</MModal>
 				:
 				null
 			}

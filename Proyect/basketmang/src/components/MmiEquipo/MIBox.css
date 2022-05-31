@@ -29,6 +29,8 @@
 }
 
 .tNoLogin{
+    background-color:rgb(56, 82, 168);
+    height: 370px;
     font-size: 40px;
     font-style: italic;
     color:azure;

@@ -2,10 +2,20 @@
     color: red;
 }
 
-.modal {
-    background-color: rgba(0, 0, 0, 0.5);
-    height: 100%;
+.modal{
+    color: black;
+    background-color: black;
+    height: 100vh;
     position: fixed;
     top: 0;
     width: 100%;
+}
+
+.modalPrueba{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 101;
 }
