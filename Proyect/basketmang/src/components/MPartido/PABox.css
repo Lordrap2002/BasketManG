@@ -34,6 +34,16 @@
     background-size: cover;
 }
 
+.taxt{
+    color:blue;
+    font-style: italic;
+    font-size: large;
+    margin-left: 15px;
+    margin-top: 5px;
+    width: 5000px;
+    
+}
+
 .paspaces{
     height: 30px;
     width: 3cm;

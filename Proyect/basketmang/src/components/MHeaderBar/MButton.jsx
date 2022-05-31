@@ -2,6 +2,7 @@ import './MButton.css';
 import {Link} from "react-router-dom";
 import {connect} from "react-redux";
 import React, { Component } from 'react';
+import logo from './settingslogo.png';
 
 function MButton(props){
   function onButtonClick(){
@@ -13,6 +14,7 @@ function MButton(props){
           className='myButton41-text'
           href={props.href}>
           {props.buttonName}
+          {props.url}
         </a>
         : props.to != '/settings' ?
         <Link to={props.to} className='myButton41-text'>
@@ -20,7 +22,12 @@ function MButton(props){
         </Link>
         :
         <Link to={props.to} className='myButtonset'>
-          {props.buttonName}
+          <img 
+				    alt='prueba'
+				    className='myButtonset'
+            src={logo}
+            //src="url(../../../public/settingslogo.png)"
+            />
         </Link>
       }
     </button>
