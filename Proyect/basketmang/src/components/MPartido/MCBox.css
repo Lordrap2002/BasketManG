@@ -2,7 +2,7 @@
     width: 35%;
     display: inline-flexbox;
     justify-content: baseline;
-    height: 120px;
+    height: 200px;
 	border: 5px solid #000;
     margin-left: 230px;
     margin-bottom: 20px;
@@ -20,7 +20,7 @@
 
 .scitems{
     background-color: rgb(231, 187, 105);
-    height: 70px;
+    height: 150px;
     width: 100%;
     flex-wrap: wrap;
     display: flex;
@@ -37,4 +37,15 @@
     font-size: 40px;
     font-style: italic;
     color:azure;
+    height: 370px;
+    align-items: center;
+}
+
+.aNoLogin{
+    font-size: 40px;
+    font-style: italic;
+    color:azure;
+    height: 150px;
+    align-items: center;
+    background-color:rgb(56, 82, 168);
 }

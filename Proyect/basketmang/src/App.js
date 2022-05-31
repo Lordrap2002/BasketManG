@@ -24,8 +24,9 @@ function App(props){
 			//console.log(response.data.data);
 			setUsers(response.data.data);
 		});
+		document.title = "BasketManG"
 	});
-	/*useEffect(()=>{
+	useEffect(()=>{
 		var paginas = document.getElementsByClassName('spages');
 		new simpleParallax(paginas, {
 			scale: 2,
@@ -33,7 +34,7 @@ function App(props){
 			orientation: 'up',
 			overflow: true,
 			transition: 'cubic-bezier(0,0,0,1)'});
-	});*/
+	});
 
 	return(
 		<div className="App">
@@ -71,14 +72,14 @@ function App(props){
 			</div>
 			{props.showLogin ?
 				props.user === -1 ?
-				<MModal>
-					<div className='login'>
-						<MLoginBox/>
-					</div>
-				</MModal>
-					:
 					<MModal>
 						<div className='login'>
+							<MLoginBox/>
+						</div>
+					</MModal>
+					:
+					<MModal>
+						<div className='logi'>
 							<MMenuButton buttonName='¿Cerrar Sesión?' className='logOut1'/>
 							<button className='logOut2' onClick={() => window.location.reload()}>
 								Aceptar

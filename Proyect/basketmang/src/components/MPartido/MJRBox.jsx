@@ -9,7 +9,7 @@ function MJRBox(props){
 	useEffect(() => {
 		if(props.user !== -1){
 			axios.get("http://localhost:5050/jugadores_usuario/" + props.user).then((response)=>{
-				setFotos(response.data);
+				setFotos([response.data[0],response.data[1],response.data[2]]);
         console.log(1)
 			});
 		}
@@ -26,7 +26,7 @@ function MJRBox(props){
           })}
         </div>
         :
-        <div className="tNoLogin">
+        <div className="aNoLogin">
           Inicia sesión primero
         </div>
         }

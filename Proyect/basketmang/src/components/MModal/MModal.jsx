@@ -3,12 +3,12 @@ import {setShowLogin} from "../../store/actions/ui";
 import {connect} from "react-redux";
 
 function MModal(props){
-
-    function CloseModal(){
-        props.setShowLogin(false);
+    function closeModal(event){
+        event.stopPropagation();
+        //props.setShowLogin(false);
     }
     return(
-        <div className="modalPrueba" onClick={()=>CloseModal()}>
+        <div className="modalPrueba" onClick={(event)=>closeModal(event)}>
             {props.children}
         </div>
     );
