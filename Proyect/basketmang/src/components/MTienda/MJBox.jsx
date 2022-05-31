@@ -2,7 +2,7 @@ import "./MJBox.css"
 import MFButton from "../MButton/MFButton";
 import axios from 'axios';
 import { useState, useEffect} from 'react';
-import {setPrecio, setShowComprar} from "../../store/actions/ui";
+import {setPrecio, setShowComprar, setMonedas} from "../../store/actions/ui";
 import {connect} from "react-redux";
 
 
@@ -26,6 +26,7 @@ function MJBox(props){
             axios.get(text).then((response)=>{});
             var text2 = "http://localhost:5050/quitar_dinero/" + props.user + "/" + props.precio;
             axios.get(text2).then((response)=>{});
+            props.setMonedas(dinero - props.precio);
           });
           props.setShowComprar(false);
         }
@@ -66,7 +67,8 @@ function MJBox(props){
 
 const mapActionsToProps = {
   setShowComprar,
-  setPrecio
+  setPrecio,
+  setMonedas
 };
 
 const mapStatesToProps = (state) => {
@@ -74,7 +76,8 @@ const mapStatesToProps = (state) => {
 		user: state.uiReducer.user,
     precio: state.uiReducer.precio,
     showComprar: state.uiReducer.showComprar,
-    jugador: state.uiReducer.jugador
+    jugador: state.uiReducer.jugador,
+    monedas: state.uiReducer.monedas,
 	};
 }
 

@@ -2,11 +2,12 @@
 const INITIAL_STATE = {
     text: 'Hola React Redux!',
     showLogin: false,
-    user: 1, //-1 para no iniciar sesión, 1 para iniciar sesión
+    user: -1, //-1 para no iniciar sesión, 1 para iniciar sesión
     loadedData: false,
     precio: 0,
     showComprar: false,
-    jugador: 0
+    jugador: 0,
+    monedas: 0
 };
 
 const uiReducer = (state = INITIAL_STATE, action) => {
@@ -40,6 +41,11 @@ const uiReducer = (state = INITIAL_STATE, action) => {
             return{
                 ...state,
                 jugador: action.payload.jugador,
+            };
+        case "SET_MONEDAS":
+            return{
+                ...state,
+                monedas: action.payload.monedas,
             };
         default:
             return state;

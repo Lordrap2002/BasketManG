@@ -40,3 +40,10 @@ export const setJugador = (jugador) => (dispatch) => {
         payload: {jugador}
     })
 }
+
+export const setMonedas = (monedas) => (dispatch) => {
+    dispatch({
+        type: "SET_MONEDAS",
+        payload: {monedas}
+    })
+}

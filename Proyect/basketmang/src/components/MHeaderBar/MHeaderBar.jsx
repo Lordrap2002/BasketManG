@@ -4,16 +4,16 @@ import MLoginButton from './MLoginButton';
 import { useState, useEffect} from 'react';
 import axios from 'axios';
 import {connect} from "react-redux";
+import {setMonedas} from "../../store/actions/ui";
 
 function MHeaderBar(props){
 	const [userName, setUserName] = useState('');
-	useEffect(() => {
-		if(props.user !== -1){
-			/*axios.get("http://localhost:5050/nombre_usuario/" + props.user).then((response)=>{
+	useEffect(() => {		
+			axios.get("http://localhost:5050/nombre_usuario/" + props.user).then((response)=>{
 				setUserName(response.data[0].nombre);
-			});*/
-			setUserName("prueba");
-		}
+				props.setMonedas(response.data[0].dinero);
+			});
+			//setUserName("prueba");
 	  }, [props.user]);
 	return(
 		<nav className='mHeaderBar-navbar'>
@@ -32,8 +32,8 @@ function MHeaderBar(props){
 				src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Basketball_Clipart.svg/240px-Basketball_Clipart.svg.png'/>
 			</div>
 			<div className='mHeaderBar-rightContainer' >
-				{props.user !== -1 ?
-				<MLoginButton buttonName={userName}/>
+				{props.user !== -1?
+				<MLoginButton buttonName={userName + " " + props.monedas}/>
 				:
 				<MLoginButton buttonName="LOG IN"/>
 				}
@@ -44,13 +44,20 @@ function MHeaderBar(props){
 	);
 }
 
+const mapActionsToProps = {
+	setMonedas
+  };
+
 const mapStatesToProps = (state) => {
 	return{
-		user: state.uiReducer.user
+		user: state.uiReducer.user,
+		precio: state.uiReducer.precio,
+		showComprar : state.uiReducer.showComprar,
+		monedas: state.uiReducer.monedas
 	};
 }
 
-export default connect(mapStatesToProps)(MHeaderBar);
+export default connect(mapStatesToProps, mapActionsToProps)(MHeaderBar);
 
 /*onButtonClicked={() => {onHeaderBarLoginClicked();}}
 	function onHeaderBarLoginClicked(){
