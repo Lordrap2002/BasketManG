@@ -5,7 +5,7 @@ import {connect} from "react-redux";
 
 function MFButton(props){
   function onButtonClick(){
-    if(props.tienda){
+    if(props.tienda && props.user != -1){
       props.setPrecio(props.valor);
       props.setJugador(props.code);
       props.setShowComprar(true);

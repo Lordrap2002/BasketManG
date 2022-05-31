@@ -26,15 +26,13 @@ function App(props){
 		});
 		document.title = "BasketManG"
 	});
-	useEffect(()=>{
-		var paginas = document.getElementsByClassName('spages');
+	var paginas = document.getElementsByClassName('spages');
 		new simpleParallax(paginas, {
 			scale: 2,
 			delay: 1,
 			orientation: 'up',
 			overflow: true,
 			transition: 'cubic-bezier(0,0,0,1)'});
-	});
 
 	return(
 		<div className="App">
