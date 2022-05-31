@@ -8,6 +8,7 @@ import {connect} from "react-redux";
 
 function MJBox(props){
   const [datos, setDatos] = useState([{"foto":"","precio":10,"codigo_jugador":1},{"foto":"","precio":30,"codigo_jugador":1},{"foto":"","precio":54,"codigo_jugador":1},{"foto":"","precio":30,"codigo_jugador":1},{"foto":"","precio":34,"codigo_jugador":1},{"foto":"","precio":12,"codigo_jugador":1},{"foto":"","precio":50,"codigo_jugador":1},{"foto":"","precio":27,"codigo_jugador":1}]);
+  const [aceptado, setAceptado] = useState(true);
   useEffect(() => {
     axios.get("http://localhost:5050/fotosPrecio_jugadores").then((response)=>{
 			  setDatos(response.data);
@@ -29,8 +30,15 @@ function MJBox(props){
             props.setMonedas(dinero - props.precio);
           });
           props.setShowComprar(false);
+        }else{
+          setAceptado(false);
         }
 		  });
+  }
+
+  function reset(){
+    props.setShowComprar(false);
+    setAceptado(true);
   }
 
   return(
@@ -52,10 +60,13 @@ function MJBox(props){
         props.user !== -1 ?
           <div className="compra">
             El jugador vale:{props.precio} ¿Quieres comprarlo?
+            {!aceptado ?
+              <div>Dinero insuficiente</div>
+              :null}
             <button className='compra1' onClick={() => verificarCompra()}>
               Aceptar
             </button>
-            <button className='compra1' onClick={() => props.setShowComprar(false)}>
+            <button className='compra1' onClick={() => reset()}>
               Cancelar
             </button>
           </div>

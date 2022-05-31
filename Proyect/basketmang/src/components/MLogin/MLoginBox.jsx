@@ -16,7 +16,8 @@ function MLoginBox(props){
   const actualizarInput3 = char => {setInput3(char.target.value);};
   const [usuario, setUser] = useState(-1);
   const [users, setUsers] = useState([]);
-  const [texto, setTexto] = useState("");
+  const [aceptado, setAceptado] = useState(true);
+  const [valido, setValido] = useState(true);
 
   useEffect(() => {
     axios.get("http://localhost:5050/usuarios/").then((response)=>{
@@ -35,34 +36,55 @@ function MLoginBox(props){
     if(u !== -1){
       props.setUsuario(u);
       props.setShowLogin(false);
+    }else{
+      setAceptado(false);
     }
   }
 
   function registro(){
-    var u = true;
-    for (var i = 0; i < users.length; i++){
-      if (users[i].email === input2 || users[i].nombre === input1){
-        u = false
+    if(input1.length !== 0 && input2.length !== 0 && input3.length > 4){
+      var u = true;
+      for (var i = 0; i < users.length; i++){
+        if (users[i].email === input2 || users[i].nombre === input1){
+          u = false
+        }
       }
+      if(u){
+        var num = users.length + 1;
+        var v1 = input1;
+        var v2 = input2;
+        var v3 = input3;
+        var text = "http://localhost:5050/create_user/" + v1 + "/" + v2 + "/" + v3 + "/" + num;
+        axios.get(text).then((response)=>{});
+        props.setUsuario(users.length + 1);
+        props.setShowLogin(false);
+      }else{
+        setAceptado(false);
+      }
+    }else{
+      setValido(false);
     }
-    if(u){
-      var num = users.length + 1;
-      var v1 = input1;
-      var v2 = input2;
-      var v3 = input3;
-      var text = "http://localhost:5050/create_user/" + v1 + "/" + v2 + "/" + v3 + "/" + num;
-      axios.get(text).then((response)=>{});
-      props.setUsuario(users.length + 1);
-      props.setShowLogin(false);
+  }
+
+  useEffect(() => {
+    if(!props.showLogin){
+      setAceptado(true);
+      setValido(true);
     }
+  });
+
+  function reset(){
+    setRegister(!register);
+    setAceptado(true);
+    setValido(true);
   }
 
   return(
     <div className='mLoginRegister-container'>
-      <button className= {register ? 'mLoginRegister-button' : 'mLoginRegister-button mLoginRegister-button-selected'} onClick={() => setRegister(false)}>
+      <button className= {register ? 'mLoginRegister-button' : 'mLoginRegister-button mLoginRegister-button-selected'} onClick={() => reset()}>
         INICIA SESIÓN
       </button>
-      <button className= {!register ? 'mLoginRegister-button' : 'mLoginRegister-button mLoginRegister-button-selected'} onClick={() => setRegister(true)}>
+      <button className= {!register ? 'mLoginRegister-button' : 'mLoginRegister-button mLoginRegister-button-selected'} onClick={() => reset()}>
         REGÍSTRATE
       </button>
       {
@@ -76,13 +98,16 @@ function MLoginBox(props){
           <input
             className='mLoginRegister-input'
             placeholder='Ingresa tu contraseña' 
-            type='password'
+            type='password' 
             id="input3" autoComplete="off" onChange={actualizarInput3}/>
-          <div className='mLoginRegister-password-help-container'>
-            <button className='mLoginRegister-password-help'>
-              Ayuda con la contraseña
-            </button>
-          </div>
+          {!aceptado ?
+            <div className='mLoginRegister-password-help-container'>
+              <button className='mLoginRegister-password-help'>
+                Datos Incorrectos
+              </button>
+            </div>
+            
+            :null}
           <div className='mLoginRegister-action-button-container'>
             <button className='mLoginRegister-action-button' onClick={() => login()}>
               INICIA SESIÓN
@@ -95,17 +120,30 @@ function MLoginBox(props){
             className='mLoginRegister-input'
             placeholder='Crea tu nombre de usuario'
             type='text'
-            id="input1" autoComplete="off" onChange={actualizarInput1}/>
+            id="input4" autoComplete="off" onChange={actualizarInput1}/>
           <input
             className='mLoginRegister-input'
             placeholder='Ingresa tu dirección de correo electrónico'
             type='text'
-            id="input2" autoComplete="off" onChange={actualizarInput2}/>
+            id="input5" autoComplete="off" onChange={actualizarInput2}/>
           <input 
             className='mLoginRegister-input'
-            placeholder='Crea tu contraseña'
+            placeholder='Crea tu contraseña(más de 3 caracteres)'
             type='password'
-            id="input3" autoComplete="off" onChange={actualizarInput3}/>
+            id="input6" autoComplete="off" onChange={actualizarInput3}/>
+          {!aceptado ?
+            <div className='mLoginRegister-password-help-container'>
+              <button className='mLoginRegister-password-help'>
+                El usuario o correo ya están registrados
+              </button>
+            </div>
+            :!valido ?
+            <div className='mLoginRegister-password-help-container'>
+              <button className='mLoginRegister-password-help'>
+                Contraseña muy corta
+              </button>
+            </div>
+            :null}
           <div className='mLoginRegister-action-button-container'>
             <button className='mLoginRegister-action-button' onClick={() => registro()}>
               REGÍSTRATE

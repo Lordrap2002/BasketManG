@@ -9,11 +9,11 @@ import {setMonedas} from "../../store/actions/ui";
 function MHeaderBar(props){
 	const [userName, setUserName] = useState('');
 	useEffect(() => {		
-			axios.get("http://localhost:5050/nombre_usuario/" + props.user).then((response)=>{
+			/*axios.get("http://localhost:5050/nombre_usuario/" + props.user).then((response)=>{
 				setUserName(response.data[0].nombre);
 				props.setMonedas(response.data[0].dinero);
-			});
-			//setUserName("prueba");
+			});*/
+			setUserName("prueba");
 	  }, [props.user]);
 	return(
 		<nav className='mHeaderBar-navbar'>
