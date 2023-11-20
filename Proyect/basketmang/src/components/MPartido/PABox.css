@@ -12,14 +12,14 @@
 
 
 .patitle{
-    background-color: rgb(255, 187, 0);
+    background-color: blue;
     height: 60px;
     font-style: italic;
     width: 100%;
     font-size: 40px;
     display: center;
     justify-content: space-between;
-    color: whitesmoke;
+    color: azure;
 }
 
 .paitems{

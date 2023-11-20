@@ -21,15 +21,15 @@ function MHeaderBar(props){
 				<img 
 				alt='app-logo' 
 				className='mHeaderBar-logo'
-				src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Basketball_Clipart.svg/240px-Basketball_Clipart.svg.png'/>
+				src='https://static.thenounproject.com/png/3776617-200.png'/>
 				<MButton buttonName="MENU PRINCIPAL" to='/'/>
-				<MButton buttonName="TIENDA" to= '/tienda'/>
-				<MButton buttonName="MI EQUIPO" to='/miEquipo'/>
-				<MButton buttonName="ESTADÍSTICAS" to='/estadisticas'/>
+				<MButton buttonName="PEDIDOS" to= '/tienda'/>
+				<MButton buttonName="GRABACIONES" to='/miEquipo'/>
+				<MButton buttonName="INVENTARIO" to='/estadisticas'/>
 				<img 
 				alt='app-logo' 
 				className='mHeaderBar-logo'
-				src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Basketball_Clipart.svg/240px-Basketball_Clipart.svg.png'/>
+				src='https://static.thenounproject.com/png/3776617-200.png'/>
 			</div>
 			<div className='mHeaderBar-rightContainer' >
 				{props.user !== -1?

@@ -8,13 +8,13 @@
 }
 
 .hjtitle{
-    background-color: rgb(255, 153, 0);
+    background-color: blue;
     height: 50px;
     width: 100%;
     font-size: 30px;
     display: center;
     justify-content: space-between;
-    color: black;
+    color: azure;
 }
 
 .hjitems{

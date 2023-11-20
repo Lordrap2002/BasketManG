@@ -1,20 +1,20 @@
 .myButton4{
-    background-color: orange;
+    background-color: darkblue;
     border-radius: 20px;
-    border: 3px solid rgb(255, 238, 0);
+    border: 3px solid white;
     box-shadow: none;
-    color: green;
+    color: azure;
     font-size: 60px;
     font-weight: bold;
     text-decoration: dashed;
     align-items: end;
-    height: 3cm;
+    height: 6cm;
     width: 12cm;
     font-style: bold;
 }
 
 .myButton4:hover{
-    color: rgb(147, 226, 147);
+    color: gray;
     cursor: pointer;
 }
 
@@ -25,5 +25,5 @@
 }
 
 .myButton4-text:hover{
-    color: rgb(66, 80, 209);
+    color: gray;
 }

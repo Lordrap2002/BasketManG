@@ -10,11 +10,11 @@ function MHome(props){
 		<div>
 			<div className='up'></div>
 			<div className='hmiddle'>
-				<MPartidoButton buttonName="GENERAR PEDIDO" to='/partido'/>
+				<MPartidoButton buttonName="GENERAR RESERVA" to='/partido'/>
 			</div>
-			<div className='hmiddle2'>
+			{/*<div className='hmiddle2'>
 				<MMenuButton buttonName="¿Necesitas ayuda?" to='/help' className='myButton2'/>
-			</div>	
+			</div>	*/}
 		</div>
 	)
 }

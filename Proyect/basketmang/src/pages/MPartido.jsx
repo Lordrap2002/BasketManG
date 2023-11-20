@@ -10,7 +10,7 @@ function MPartido(){
 	return(
 		<div>
 			<div className='pstyle'>
-				<MTitulo className="titulopartido" nombre="Partido"></MTitulo>
+				<MTitulo className="titulopartido" nombre="Generar Reserva"></MTitulo>
 			</div>
 			<div className='pbottom'>
 				<MCBox></MCBox>

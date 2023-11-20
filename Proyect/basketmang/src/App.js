@@ -56,7 +56,7 @@ function App(props){
 			</div>
 			<div className='footer'>
 				<div className='fooitems'>
-					BasketManG © 2022 - 2022
+					Javvi © 2023 - 2023
 				</div>
 				<div className='fooitems'>
 					Terminos de Servicio

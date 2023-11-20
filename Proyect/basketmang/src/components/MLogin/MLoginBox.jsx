@@ -128,7 +128,7 @@ function MLoginBox(props){
             id="input5" autoComplete="off" onChange={actualizarInput2}/>
           <input 
             className='mLoginRegister-input'
-            placeholder='Crea tu contraseña(más de 3 caracteres)'
+            placeholder='Crea tu contraseña(más de 14 caracteres)'
             type='password'
             id="input6" autoComplete="off" onChange={actualizarInput3}/>
           {!aceptado ?

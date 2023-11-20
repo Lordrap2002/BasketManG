@@ -1,6 +1,6 @@
 .loginmistyle{
     width: 20%;
-    background-color: darkgreen;
+    background-color: blue;
     display: inline-flexbox;
     justify-content: baseline;
     height: 222px;
@@ -8,7 +8,7 @@
 }
 
 .logininerContainer{
-    background-color: darkgreen;
+    background-color: blue;
     height: 30px;
     width: 100%;
 }
@@ -20,7 +20,7 @@
 }
 
 .mLoginRegister-action-button {
-    background-color: #ecad00;
+    background-color: gray;
     border: 0;
     color: white;
     font-size: large;
@@ -55,7 +55,7 @@
 
 .mLoginRegister-button-selected {
     background-color: white;
-    color: #ec9900;
+    color: gray;
 }
 
 .mLoginRegister-container {

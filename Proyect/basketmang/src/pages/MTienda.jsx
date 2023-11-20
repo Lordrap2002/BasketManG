@@ -9,7 +9,7 @@ function MTienda(){
 		<div className='tstyle'>
 			{/*<div className='tback'></div>*/}
 			<div className='tfront'>
-				<MTitulo className="titulotienda" nombre="Tienda"></MTitulo>
+				<MTitulo className="titulotienda" nombre="Pedidos"></MTitulo>
 				<div className='tbottom'>
 					<MJBox></MJBox>
 					<MTBox></MTBox>

@@ -10,17 +10,17 @@
 }
 
 .sjrtitle{
-    background-color: rgb(255, 153, 0);
+    background-color: blue;
     height: 40px;
     width: 100%;
     font-size: 25px;
     display: center;
     justify-content: space-between;
-    color: black;
+    color: azure;
 }
 
 .sjritems{
-    background-color: rgb(231, 187, 105);
+    background-color: gray;
     height: 150px;
     width: 100%;
     flex-wrap: wrap;

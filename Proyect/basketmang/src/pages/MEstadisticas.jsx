@@ -8,7 +8,7 @@ import "./MEstadisticas.css"
 function MEstadisticas(){
 	return(
 		<div className='ESstyle'>
-			<MTitulo className="tituloEstadisticas" nombre="Estadísticas"></MTitulo>
+			<MTitulo className="tituloEstadisticas" nombre="Inventario"></MTitulo>
 			<div className='ESbottom'>
 				<MJUBox></MJUBox>
 				<MEQBox></MEQBox>

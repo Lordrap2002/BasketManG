@@ -8,7 +8,7 @@ import "./MmiEquipo.css";
 function MmiEquipo(){
 	return(
 		<div className='estyle'>
-			<MTitulo className="tituloMiEquipo" nombre="Mi Equipo"></MTitulo>
+			<MTitulo className="tituloMiEquipo" nombre="Grabaciones"></MTitulo>
 			<div className='ebottom'>
 				<MJIBox></MJIBox>
 				<MJBBox></MJBBox>

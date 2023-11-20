@@ -10,7 +10,7 @@
 }
 
 .loginmyButton1:hover{
-    color: blue;
+    color: gray;
     cursor: pointer;
 }
 
@@ -21,12 +21,12 @@
 }
 
 .loginmyButton1-text:hover{
-    color: rgb(66, 80, 209);
+    color: gray;
 }
 
 
 .mLoginRegister-action-button {
-    background-color: orange;
+    background-color: blue;
     border: 0;
     color: white;
     font-size: large;
@@ -61,7 +61,7 @@
 
 .mLoginRegister-button-selected {
     background-color: white;
-    color: orange;
+    color: blue;
     
 }
 
