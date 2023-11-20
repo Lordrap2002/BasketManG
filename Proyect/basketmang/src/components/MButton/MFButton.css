@@ -5,7 +5,7 @@
     border: 0;
     box-shadow: none;
     color: white;
-    background-color: orange;
+    background-color: blue;
     font-size: x-large;
     font-weight: bold;
     text-decoration: none;
@@ -18,7 +18,7 @@
 .pbutton{
    
     background-size: 50px 50px;
-    background-color: rgb(255, 166, 0);
+    background-color: blue;
     border-radius: 30px;
     border: 0;
     box-shadow: none;

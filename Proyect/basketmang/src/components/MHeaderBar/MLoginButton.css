@@ -11,7 +11,7 @@
 }
 
 .myButton3:hover{
-    color: rgb(0, 17, 255);
+    color: gray;
     cursor: pointer;
 }
 
@@ -22,5 +22,5 @@
 }
 
 .myButton3-text:hover{
-    color: rgb(66, 80, 209);
+    color: gray;
 }

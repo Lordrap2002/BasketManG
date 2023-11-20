@@ -16,7 +16,7 @@
   }
   
   .mHeaderButton-text:hover {
-    color: #3500f3;
+    color: gray;
   }
   
   .myButton41{
@@ -39,7 +39,7 @@
 }
 
 .myButton41-text:hover{
-    color: rgb(66, 80, 209);
+    color: gray;
 }
 
 .myButtonset{

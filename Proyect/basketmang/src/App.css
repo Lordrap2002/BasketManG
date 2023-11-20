@@ -24,7 +24,7 @@
   height: 700px;
   position: sticky;
   z-index: 2;
-  background-color: orangered;
+  background-color: gray;
 }
 
 .hola {
@@ -59,7 +59,7 @@
 
 .footer{
   width: 100%;
-  background-color: orangered;
+  background-color: blue;
   height: 25vh;
   display: inline-flex;
 }
