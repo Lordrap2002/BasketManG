@@ -24,7 +24,7 @@ function App(props){
 			//console.log(response.data.data);
 			setUsers(response.data.data);
 		});
-		document.title = "BasketManG"
+		document.title = "Javvi"
 	});
 	var paginas = document.getElementsByClassName('spages');
 		new simpleParallax(paginas, {
