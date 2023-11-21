@@ -11,8 +11,8 @@ app.use(express.json());
 const dbClient = new Client({
     host: 'demoprocesosdb.ccolmbmlg3cm.us-east-2.rds.amazonaws.com',
     port: '5432',
-    user: 'backend',
-    password: 'backend123',
+    user: 'root',
+    password: 'Procesos2023*',
     database: 'procesos_Db'
 });
 
@@ -27,11 +27,11 @@ app.get("/", (req, res) => {
 });
 
 app.get("/usuarios", (req, res) =>{
-    let sql = 'SELECT * FROM "Usuarios"';
+    let sql = 'SELECT * FROM usuarios.administradores';
     dbClient.query(sql, (error, db_response) =>{
         let responseData = {};
         if (error){
-            responseData = {data: null, status: 500, message: "Error interno de la db."};
+            responseData = {data: null, status: 500, message: "Error interno de la db." + error};
         }else if (db_response.rows.length === 0){
             responseData = {data: [], status: 404, message: "No se encontraron registros."};
         }else{
