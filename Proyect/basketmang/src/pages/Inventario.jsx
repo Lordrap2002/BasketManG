@@ -1,11 +1,11 @@
 import React from 'react';
 import MTitulo from '../components/MTitulo/MTitulo';
-import MEQBox from '../components/MEstadisticas/MEQBox';
-import MJUBox from '../components/MEstadisticas/MJUBox';
-import MRBox from '../components/MEstadisticas/MRBox';
-import "./MEstadisticas.css"
+import MEQBox from '../components/Inventario/Disponible';
+import MJUBox from '../components/Inventario/EnUso';
+import MRBox from '../components/Inventario/Reparación';
+import "./Inventario.css"
 
-function MEstadisticas(){
+function Inventario(){
 	return(
 		<div className='ESstyle'>
 			<MTitulo className="tituloEstadisticas" nombre="Inventario"></MTitulo>
@@ -18,4 +18,4 @@ function MEstadisticas(){
 	)
 }
 
-export default MEstadisticas;
+export default Inventario;

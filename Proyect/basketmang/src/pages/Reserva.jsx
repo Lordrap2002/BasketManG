@@ -1,26 +1,45 @@
-// ReservaForm.js
 import React, { useState } from 'react';
-import './Reserva.css'; // Importa los estilos
+import ErrorPopup from './ErrorPopup';  
+import './Reserva.css';
 
 const ReservaForm = () => {
   const [nombre, setNombre] = useState('');
   const [fecha, setFecha] = useState('');
   const [hora, setHora] = useState('');
   const [email, setEmail] = useState('');
-  const [telefono, setTelefono] = useState('');
   const [descripcion, setDescripcion] = useState('');
   const [servicio, setServicio] = useState('robot');
   const [horasServicio, setHorasServicio] = useState('1');
   const [lugarReserva, setLugarReserva] = useState('1');
+  const [error, setError] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Reserva realizada:', { nombre, fecha, hora, email, telefono, descripcion, servicio, horasServicio, lugarReserva });
+  
+    const fechaActual = new Date();
+    const fechaSeleccionada = new Date(fecha);
+    fechaActual.setDate(fechaActual.getDate() - 1);
+  
+    if (fechaSeleccionada < fechaActual) {
+      setError('La fecha debe ser mayor o igual al día actual.');
+      return;
+    }
+  
+    // Si la fecha es válida, restablece el estado de error
+    setError('');
+  
+    console.log('Reserva realizada:', { nombre, fecha, hora, email, descripcion, servicio, horasServicio, lugarReserva });
     // Aquí puedes agregar la lógica para manejar la reserva, como enviarla a un servidor o almacenarla localmente.
+  };
+
+  const closeErrorPopup = () => {
+    setError('');
   };
 
   return (
     <div className="center">
+      {/* Muestra el pop-up de error si existe */}
+      {error && <ErrorPopup message={error} onClose={closeErrorPopup} />}
       <form onSubmit={handleSubmit} className="two-columns-form">
         <div className="column">
           <div className="form-group">
@@ -58,14 +77,6 @@ const ReservaForm = () => {
         </div>
         <div className="column">
           <div className="form-group">
-            <label>Teléfono:</label>
-            <input
-              type="tel"
-              value={telefono}
-              onChange={(e) => setTelefono(e.target.value)}
-            />
-          </div>
-          <div className="form-group">
             <label>Descripción:</label>
             <textarea
               value={descripcion}
@@ -80,7 +91,6 @@ const ReservaForm = () => {
             >
               <option value="robot">Robot</option>
               <option value="dron">Dron</option>
-              <option value="helado">Helado</option>
             </select>
           </div>
           <div className="form-group">
@@ -100,9 +110,9 @@ const ReservaForm = () => {
               value={lugarReserva}
               onChange={(e) => setLugarReserva(e.target.value)}
             >
-              <option value="1">Lugar 1</option>
-              <option value="2">Lugar 2</option>
-              <option value="3">Lugar 3</option>
+              <option value="1">Acacias</option>
+              <option value="2">Lagos</option>
+              <option value="3">Almendros</option>
             </select>
           </div>
           <div className="form-group">

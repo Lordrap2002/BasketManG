@@ -6,13 +6,7 @@ import { useState, useEffect} from 'react';
 
 function MRBox(props){
   const [datos, setDatos] = useState([0,0,0,'-',0]);
-	useEffect(() => {
-		if(props.user !== -1){
-			axios.get("http://localhost:5050/datos_usuarios/" + props.user).then((response)=>{
-				setDatos([response.data[0].victorias,response.data[0].partidos,response.data[0].puntaje,response.data[0].liga,response.data[0].nivel]);
-			});
-		}
-	  }, [props.user]);
+	
   return(
     <nav className="Rbox">
       <div className="Rtitle">
