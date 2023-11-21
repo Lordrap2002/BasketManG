@@ -11,7 +11,7 @@ import MSettings from './pages/MSettings';
 import {connect} from "react-redux";
 import MmiEquipo from './pages/MmiEquipo';
 import MEstadisticas from './pages/MEstadisticas';
-import MPartido from './pages/MPartido';
+import Reserva from './pages/Reserva';
 import simpleParallax from 'simple-parallax-js';
 import MMenuButton from './components/MMenuButton';
 import MModal from './components/MModal/MModal';
@@ -49,7 +49,7 @@ function App(props){
 						<Route exact path='/settings' element={<MSettings/>}/>
 						<Route exact path='/miEquipo' element={<MmiEquipo/>}/>
 						<Route exact path='/estadisticas' element={<MEstadisticas/>}/>
-						<Route exact path='/partido' element={<MPartido/>}/>
+						<Route exact path='/partido' element={<Reserva/>}/>
 					</Routes>
 				</div> 
 				
