@@ -3,15 +3,18 @@ let cors = require("cors");
 const { Client } = require("pg");
 const req = require('express/lib/request');
 
-const dbClient = new Client({
-    connectionString: "postgresql://postgres:Salijada2002@localhost:5432/BMGdatabase"
-});
-
 let app = express();
-
 //Middlewares
 app.use(cors());
 app.use(express.json());
+
+const dbClient = new Client({
+    host: 'demoprocesosdb.ccolmbmlg3cm.us-east-2.rds.amazonaws.com',
+    port: '5432',
+    user: 'backend',
+    password: 'backend123',
+    database: 'procesos_Db'
+});
 
 dbClient.connect(error => {
     if (error) console.log("Error al conectar a db: ", error);
