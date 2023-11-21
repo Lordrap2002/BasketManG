@@ -28,9 +28,9 @@ function MLoginBox(props){
   function login(){
     var u = -1;
     for (var i = 0; i < users.length; i++){
-      if (users[i].email === input1 && users[i].contraseña === input3){
-        setUser(users[i].codigo_usuario);
-        u = users[i].codigo_usuario;
+      if (users[i].correo === input1 && users[i].contraseña === input3){
+        setUser(users[i].id);
+        u = users[i].id;
       }
     }
     if(u !== -1){
@@ -42,21 +42,20 @@ function MLoginBox(props){
   }
 
   function registro(){
-    if(input1.length !== 0 && input2.length !== 0 && input3.length > 4){
+    if(input1.length !== 0 && input2.length !== 0 && input3.length > 14){
       var u = true;
       for (var i = 0; i < users.length; i++){
-        if (users[i].email === input2 || users[i].nombre === input1){
+        if (users[i].correo === input2 || users[i].nombre === input1){
           u = false
         }
       }
       if(u){
-        var num = users.length + 1;
         var v1 = input1;
         var v2 = input2;
         var v3 = input3;
-        var text = "http://localhost:5050/create_user/" + v1 + "/" + v2 + "/" + v3 + "/" + num;
+        var text = "http://localhost:5050/create_user/" + v1 + "/" + v2 + "/" + v3;
         axios.get(text).then((response)=>{});
-        props.setUsuario(users.length + 1);
+        //props.setUsuario(users.length + 1);
         props.setShowLogin(false);
       }else{
         setAceptado(false);

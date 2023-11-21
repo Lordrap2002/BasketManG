@@ -72,4 +72,29 @@
     background-color: #45a049;
   }
   
+  .error-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Asegúrate de que sea mayor que el z-index del contenido principal */
+  }
+  
+  .error-popup {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .popup-content {
+    text-align: center;
+  }
+  
+  /* Añade estilos según sea necesario */
   

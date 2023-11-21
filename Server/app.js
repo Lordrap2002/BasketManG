@@ -3,15 +3,18 @@ let cors = require("cors");
 const { Client } = require("pg");
 const req = require('express/lib/request');
 
-const dbClient = new Client({
-    connectionString: "postgresql://postgres:Salijada2002@localhost:5432/BMGdatabase"
-});
-
 let app = express();
-
 //Middlewares
 app.use(cors());
 app.use(express.json());
+
+const dbClient = new Client({
+    host: 'demoprocesosdb.ccolmbmlg3cm.us-east-2.rds.amazonaws.com',
+    port: '5432',
+    user: 'root',
+    password: 'Procesos2023*',
+    database: 'procesos_Db'
+});
 
 dbClient.connect(error => {
     if (error) console.log("Error al conectar a db: ", error);
@@ -24,11 +27,11 @@ app.get("/", (req, res) => {
 });
 
 app.get("/usuarios", (req, res) =>{
-    let sql = 'SELECT * FROM "Usuarios"';
+    let sql = 'SELECT * FROM usuarios.administradores';
     dbClient.query(sql, (error, db_response) =>{
         let responseData = {};
         if (error){
-            responseData = {data: null, status: 500, message: "Error interno de la db."};
+            responseData = {data: null, status: 500, message: "Error interno de la db." + error};
         }else if (db_response.rows.length === 0){
             responseData = {data: [], status: 404, message: "No se encontraron registros."};
         }else{
@@ -155,17 +158,16 @@ app.get("/fotosPrecio_jugadores", (req, res) =>{
     });
 });
 
-app.get("/create_user/:nombre/:email/:contra/:code", (req, res) =>{
+app.get("/create_user/:nombre/:correo/:contra", (req, res) =>{
     let n = req.params.nombre;
-    let e = req.params.email; 
+    let e = req.params.correo; 
     let c = req.params.contra;
-    let co = req.params.code;
-    let values = [n,e,c,co,0, 0, 0, 0, "Ninguna", 0];
-    let sql = 'INSERT INTO "Usuarios" VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10);';
+    let values = [n,e,c];
+    let sql = 'INSERT INTO usuarios.administradores VALUES (nextval(\'usuarios.administradores_id_seq\'), $1, $2, $3);';
     dbClient.query(sql, values, (error, db_response) =>{
         let responseData = {};   
         if (error){     
-            responseData = { status: 500, message: "Error interno de la db."};
+            responseData = { status: 500, message: "Error interno de la db." + error};
         }else{
             responseData = {status: 200, message: "El usuario se guardó correctamente en la base de datos"};   
         }
