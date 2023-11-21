@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./Inventario.css";
 import MTitulo from '../components/MTitulo/MTitulo';
 
+
 const Inventario = () => {
-  // Datos de ejemplo para el inventario
   const inventoryData = [
 	{ id: 1, tipo: 'Robot', estado: 'En uso', imagen: 'https://noticiaslogisticaytransporte.com/wp-content/uploads/2016/04/starship-robot.jpg', carga: 80 },
 	{ id: 2, tipo: 'Drone', estado: 'Disponible', imagen: 'https://us.123rf.com/450wm/edlefler/edlefler1706/edlefler170600002/79991848-drone-blanco-con-la-c%C3%A1mara-de-la-acci%C3%B3n-4k-aislada-en-el-fondo-blanco.jpg?ver=6', carga: 20 },
