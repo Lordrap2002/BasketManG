@@ -25,7 +25,7 @@ function MHeaderBar(props){
 				<MButton buttonName="MENU PRINCIPAL" to='/'/>
 				<MButton buttonName="PEDIDOS" to= '/tienda'/>
 				<MButton buttonName="GRABACIONES" to='/miEquipo'/>
-				<MButton buttonName="INVENTARIO" to='/estadisticas'/>
+				<MButton buttonName="INVENTARIO" to='/inventario'/>
 				<img 
 				alt='app-logo' 
 				className='mHeaderBar-logo'

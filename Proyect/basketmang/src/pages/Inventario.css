@@ -1,14 +1,108 @@
-.ESstyle{
+/* Inventory.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+
+  
+
+  .sstyle{
     align-items: stretch;
-    display: inline-flexbox;
     display: flex;
     flex-direction: column;
-}
+  }
+  
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center; /* Añadido para centrar el contenido */
+  }
+  
+  h1 {
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+    background-color: lightblue;
+    color: white;
+  }
+  
+  button {
+    background-color: lightblue;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: lightblue;
+  }
+  
+  /* Estilos específicos para cada botón */
+  button.enUso {
+    background-color: blue;
+    font-weight: bold;
+  }
+  
+  button.disponible {
+    background-color: blue;
+    font-weight: bold;
+  }
+  
+  button.reparacion {
+    background-color: blue;
+    font-weight: bold;
+  }
 
-.ESbottom{
+  ul {
+    list-style-type: none;
+    padding: 0;
     display: flex;
-    justify-content: space-between;
-    height: calc(100vh - 80%);
-    width: 100%;
-    padding: 0px 35px;
-}
+    flex-wrap: wrap;
+    justify-content: center; /* Centra los elementos horizontalmente */
+  }
+  
+  li {
+    background-color: #fff;
+    margin: 10px; /* Aumenta el margen entre elementos */
+    padding: 10px; /* Aumenta el espacio interno de cada elemento */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+  }
+  
+  li div {
+    margin-right: 20px; /* Aumenta el espacio entre la imagen y el texto */
+  }
+  
+  /* Estilos comunes para las letras "Tipo" y "Carga" dentro de cada elemento */
+  li p.etiqueta {
+    font-weight: bold;
+    color: black;
+    margin: 0;
+  }
+  
+  li p.valor {
+    font-weight: bold;
+    color: gray;
+    background-color: lightblue;
+    padding: 5px 10px; /* Aumenta el espacio interno del elemento */
+    border-radius: 5px;
+    margin: 0;
+  }
+  
+  li img {
+    max-width: 100px; /* Aumenta el tamaño máximo de la imagen */
+    max-height: 100px; /* Aumenta el tamaño máximo de la imagen */
+    object-fit: cover;
+    margin-right: 20px;
+    margin-left: auto;
+  }
+  

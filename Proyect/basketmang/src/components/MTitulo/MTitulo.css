@@ -45,7 +45,7 @@
     margin-bottom: 30px;
 }
 
-.tituloMiEquipo{
+.tituloMiEquipo {
     width: 60%;
     background-color: transparent;
     height: 80px;
@@ -58,9 +58,9 @@
     align-self: center;
     border: none;
     border-radius: 10px;
-    margin-bottom: 30px;
-}
-
+    margin-bottom: 20px;
+  }
+  
 .titulohelp{
     width: 30%;
     background-color: transparent;
@@ -91,3 +91,4 @@
     border-radius: 10px;
     margin-bottom: 20px;
 }
+
