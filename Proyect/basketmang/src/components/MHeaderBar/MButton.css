@@ -28,7 +28,7 @@
 }
 
 .myButton41:hover{
-    color: rgb(147, 226, 147);
+    color: gray;
     cursor: pointer;
 }
 
@@ -46,12 +46,11 @@
   background-color: transparent;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 60px 60px;
   color: transparent;
   width: 60px;
   height: 60px;
-  font-size: xx-large;
-
+  font-size: x-large;
+  margin-top: -8px;
 }
 
 .myButtonset:hover{

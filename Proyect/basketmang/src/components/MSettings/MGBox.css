@@ -2,7 +2,7 @@
     width: 30%;
     display: inline-flexbox;
     justify-content: baseline;
-    height: 650px;
+    height: 500px;
 	border: 5px solid #000;
     margin-left: 200px;
 }
@@ -19,7 +19,7 @@
 
 .sgitems{
     background-color: gray;
-    height: 590px;
+    height: 440px;
     width: 100%;
     flex-wrap: wrap;
     display: flex;
