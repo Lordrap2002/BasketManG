@@ -12,7 +12,6 @@ function MmiEquipo(){
 			<div className='ebottom'>
 				<MJIBox></MJIBox>
 				<MJBBox></MJBBox>
-				<MIBox></MIBox>
 			</div>
 		</div>
 		

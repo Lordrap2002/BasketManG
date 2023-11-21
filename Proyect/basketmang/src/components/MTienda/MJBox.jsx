@@ -7,7 +7,7 @@ import {connect} from "react-redux";
 
 
 function MJBox(props){
-  const [datos, setDatos] = useState([{"foto":"","precio":10,"codigo_jugador":1},{"foto":"","precio":30,"codigo_jugador":2},{"foto":"","precio":54,"codigo_jugador":3},{"foto":"","precio":30,"codigo_jugador":4},{"foto":"","precio":34,"codigo_jugador":5},{"foto":"","precio":12,"codigo_jugador":6},{"foto":"","precio":50,"codigo_jugador":7},{"foto":"","precio":27,"codigo_jugador":8}]);
+  const [datos, setDatos] = useState([{"foto":"","precio":10,"codigo_jugador":1},{"foto":"","precio":30,"codigo_jugador":2},{"foto":"","precio":54,"codigo_jugador":3}]);
   const [aceptado, setAceptado] = useState(true);
   useEffect(() => {
     axios.get("http://localhost:5050/fotosPrecio_jugadores").then((response)=>{
@@ -44,14 +44,20 @@ function MJBox(props){
   return(
     <nav className="tjbox">
       <div className="tjtitle">
-        Jugadores
+        Pedidos Activos
       </div>
-      <div className="tjitems">
-        {datos.map(d => {
-					return <MFButton key={d.codigo_jugador} className="tbutton" tienda="true" valor={d.precio} code={d.codigo_jugador} url={d.foto}></MFButton>
-				})}
-      </div>
-      {props.showComprar ?
+      {props.user !== -1 ?
+          <div className="tjitems">
+          {datos.map(d => {
+            return <MFButton key={d.codigo_jugador} className="tbutton" tienda="true" valor={d.precio} code={d.codigo_jugador} url={d.foto}></MFButton>
+          })}
+          </div>
+        :
+        <div className="ttNoLogin">
+          Inicia sesión primero
+        </div>
+        }
+      {/*props.showComprar ?
         props.user !== -1 ?
           <div className="compra">
             El jugador vale:{props.precio} ¿Quieres comprarlo?
@@ -66,7 +72,7 @@ function MJBox(props){
             </button>
           </div>
           :null
-        :null}
+            :null*/}
     </nav>
   );
 }

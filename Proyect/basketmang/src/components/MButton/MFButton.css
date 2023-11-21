@@ -42,9 +42,10 @@
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
-    width: 100px;
-    height: 100px;
-    margin: 4%;
+    width: 90%;
+    height: 20%;
+    margin: 1%;
+    margin-bottom: 1%;
 }
 
 .prueba{

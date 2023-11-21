@@ -24,7 +24,7 @@
     flex-wrap: wrap;
     display: flex;
     align-content: space-between;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .pruebita{
@@ -83,3 +83,10 @@
   color: gray;
   }
 
+.ttNoLogin{
+    font-size: 40px;
+    font-style: italic;
+    color:azure;
+    height: 310px;
+    background-color: gray;
+}

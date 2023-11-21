@@ -158,17 +158,16 @@ app.get("/fotosPrecio_jugadores", (req, res) =>{
     });
 });
 
-app.get("/create_user/:nombre/:email/:contra/:code", (req, res) =>{
+app.get("/create_user/:nombre/:correo/:contra", (req, res) =>{
     let n = req.params.nombre;
-    let e = req.params.email; 
+    let e = req.params.correo; 
     let c = req.params.contra;
-    let co = req.params.code;
-    let values = [n,e,c,co,0, 0, 0, 0, "Ninguna", 0];
-    let sql = 'INSERT INTO "Usuarios" VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10);';
+    let values = [n,e,c];
+    let sql = 'INSERT INTO usuarios.administradores VALUES (nextval(\'usuarios.administradores_id_seq\'), $1, $2, $3);';
     dbClient.query(sql, values, (error, db_response) =>{
         let responseData = {};   
         if (error){     
-            responseData = { status: 500, message: "Error interno de la db."};
+            responseData = { status: 500, message: "Error interno de la db." + error};
         }else{
             responseData = {status: 200, message: "El usuario se guardó correctamente en la base de datos"};   
         }
