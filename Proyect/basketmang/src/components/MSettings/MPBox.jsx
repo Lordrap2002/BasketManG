@@ -5,13 +5,13 @@ function MPBox(props){
   return(
     <nav className="spbox">
       <div className="sptitle">
-        Equipo
+        Grabaciones
       </div>
       <div className="spitems">
-        <MTButton className="sbutton" text="Nombre"></MTButton>
-        <MTButton className="sbutton" text="Color Representativo"></MTButton>
-        <MTButton className="sbutton" text="Escudo"></MTButton>
-        <MTButton className="sbutton" text="Oufit Representativo"></MTButton>
+        <MTButton className="sbutton" text="Max # de Activas en pantalla: 5"></MTButton>
+        <MTButton className="sbutton" text="Max # de Pendientes en pantalla: 8"></MTButton>
+        <MTButton className="sbutton" text="Confirmar antes de cancelar: Si"></MTButton>
+        <MTButton className="sbutton" text="Ordenar por: Fecha"></MTButton>
       </div>
     </nav>
   );

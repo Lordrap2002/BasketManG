@@ -17,16 +17,16 @@ function MJIBox(props){
   return(
     <nav className="tJIbox">
       <div className="tJItitle">
-        Jugadores Iniciales
+        Grabaciones Activas
       </div>
       {props.user !== -1 ?
         <div className="tJIitems">
-          {fotos.map(f => {
-            return <MFButton key={f.codigo_jugador} className="ebutton" url={f.foto}></MFButton>
-          })}
+          <MFButton className="tbutton" url="https://r9asv1v2iki1zzs4aaqy3fig-wpengine.netdna-ssl.com/wp-content/uploads/2016/11/Screenshot-2016-11-22-23.24.58.png"></MFButton>
+          <MFButton className="tbutton" url="https://r9asv1v2iki1zzs4aaqy3fig-wpengine.netdna-ssl.com/wp-content/uploads/2016/11/Screenshot-2016-11-22-23.24.05.png"></MFButton>
+          <MFButton className="tbutton" url="https://r9asv1v2iki1zzs4aaqy3fig-wpengine.netdna-ssl.com/wp-content/uploads/2016/11/Screenshot-2016-11-22-23.24.05.png"></MFButton>
         </div>
         :
-        <div className="tNoLogin">
+        <div className="ttNoLogin">
           Inicia sesión primero
         </div>
         }

@@ -1,9 +1,10 @@
 .tJIbox{
-    width: 30%;
-    display: inline-flexbox;
+    width: 55%;
     justify-content: baseline;
-    height: 430px;
+    display: inline-flexbox;
+    height: 370px;
 	border: 5px solid #000;
+    margin-left: 10px;
 }
 
 .tJItitle{
@@ -19,12 +20,12 @@
 
 .tJIitems{
     background-color: gray;
-    height: 370px;
+    height: 310px;
     width: 100%;
     flex-wrap: wrap;
     display: flex;
     align-content: space-between;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .tNoLogin{
