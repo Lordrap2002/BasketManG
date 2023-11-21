@@ -28,9 +28,9 @@ function MLoginBox(props){
   function login(){
     var u = -1;
     for (var i = 0; i < users.length; i++){
-      if (users[i].email === input1 && users[i].contraseña === input3){
-        setUser(users[i].codigo_usuario);
-        u = users[i].codigo_usuario;
+      if (users[i].correo === input1 && users[i].contraseña === input3){
+        setUser(users[i].id);
+        u = users[i].id;
       }
     }
     if(u !== -1){
