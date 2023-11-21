@@ -8,9 +8,11 @@
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
+    position: center;
+    text-align: center;
     width: 90%;
-    height: 5%;
-    margin: 4%;
+    height: 10%;
+    margin: 5%;
 }
 
 .hbutton{
