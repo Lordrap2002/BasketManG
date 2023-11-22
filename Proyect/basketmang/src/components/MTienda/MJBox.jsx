@@ -4,7 +4,6 @@ import axios from 'axios';
 import { useState, useEffect} from 'react';
 import {connect} from "react-redux";
 
-
 function MJBox(props){
   const [datos, setDatos] = useState([{"foto":"","precio":10,"codigo_jugador":1},{"foto":"","precio":30,"codigo_jugador":2},{"foto":"","precio":54,"codigo_jugador":3}]);
   //const [aceptado, setAceptado] = useState(true);
@@ -47,9 +46,9 @@ function MJBox(props){
       </div>
       {props.user !== -1 ?
           <div className="tjitems">
-            <MFButton className="tbutton" url="https://r9asv1v2iki1zzs4aaqy3fig-wpengine.netdna-ssl.com/wp-content/uploads/2016/11/Screenshot-2016-11-22-23.24.58.png"></MFButton>
-            <MFButton className="tbutton" url="https://r9asv1v2iki1zzs4aaqy3fig-wpengine.netdna-ssl.com/wp-content/uploads/2016/11/Screenshot-2016-11-22-23.24.05.png"></MFButton>
-            <MFButton className="tbutton" url="https://r9asv1v2iki1zzs4aaqy3fig-wpengine.netdna-ssl.com/wp-content/uploads/2016/11/Screenshot-2016-11-22-23.24.05.png"></MFButton>
+            <MFButton className="tbutton"></MFButton>
+            <MFButton className="t1button"></MFButton>
+            <MFButton className="tbutton"></MFButton>
           </div>
         :
         <div className="ttNoLogin">

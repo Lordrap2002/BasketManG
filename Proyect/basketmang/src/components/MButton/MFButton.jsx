@@ -12,11 +12,26 @@ function MFButton(props){
     }
   }
   return(
-    <button className={`${props.className}`} url={props.url} onClick={() => {onButtonClick();}}>
+    <button className={`${props.className}`} url={props.url}>
+      {props.className === 'tbutton' ?
       <img 
-				alt='prueba'
-				className='pruebita'
-				src={props.url}/>
+        height="60"
+        width="60"
+				src='https://static.thenounproject.com/png/3776617-200.png'
+        />
+        :
+        <img 
+        height="40"
+        width="40"
+				src='https://cdn3.iconfinder.com/data/icons/drone-delivery-service/500/yul578_7_top_view_drone_business_logo_silhouette_technology-512.png'
+        />
+        }
+        {props.url !== "hola" ?
+        'Tiempo restante: 20 min Batería: 30%'
+        :
+        'Hora: 3:20pm Lugar: Lago'
+        }
+        
     </button>
     
   );
