@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ErrorPopup from './ErrorPopup';  
 import './Reserva.css';
 
-const ReservaForm = () => {
+const ReservaForm = (props) => {
   const [nombre, setNombre] = useState('');
   const [fecha, setFecha] = useState('');
   const [hora, setHora] = useState('');
@@ -40,6 +40,7 @@ const ReservaForm = () => {
     <div className="center">
       {/* Muestra el pop-up de error si existe */}
       {error && <ErrorPopup message={error} onClose={closeErrorPopup} />}
+      {props.user !== -1 ?
       <form onSubmit={handleSubmit} className="two-columns-form">
         <div className="column">
           <div className="form-group">
@@ -120,6 +121,11 @@ const ReservaForm = () => {
           </div>
         </div>
       </form>
+      :
+      <div className="ttNoLogin">
+        Inicia sesión primero
+      </div>
+      }
     </div>
   );
 };

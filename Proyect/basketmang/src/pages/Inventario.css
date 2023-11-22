@@ -106,3 +106,10 @@ body {
     margin-left: auto;
   }
   
+  .ttNoLogin{
+    font-size: 40px;
+    font-style: italic;
+    color:azure;
+    height: 310px;
+    background-color: gray;
+}

@@ -3,7 +3,7 @@ import "./Inventario.css";
 import MTitulo from '../components/MTitulo/MTitulo';
 
 
-const Inventario = () => {
+const Inventario = (props) => {
   const inventoryData = [
 	{ id: 1, tipo: 'Robot', estado: 'En uso', imagen: 'https://noticiaslogisticaytransporte.com/wp-content/uploads/2016/04/starship-robot.jpg', carga: 80 },
 	{ id: 2, tipo: 'Drone', estado: 'Disponible', imagen: 'https://us.123rf.com/450wm/edlefler/edlefler1706/edlefler170600002/79991848-drone-blanco-con-la-c%C3%A1mara-de-la-acci%C3%B3n-4k-aislada-en-el-fondo-blanco.jpg?ver=6', carga: 20 },
@@ -24,8 +24,8 @@ const Inventario = () => {
   const filteredInventory = inventoryData.filter(item => item.estado === visibleInventory);
 
   return (
-	
-    <div className="sstyle">
+	  
+	  <div className="sstyle">
 	 <MTitulo className="tituloMiEquipo" nombre="Inventario"></MTitulo>
 
 	 <div>
@@ -33,24 +33,29 @@ const Inventario = () => {
 		<button className="disponible" onClick={() => setVisibleInventory('Disponible')}>Disponible</button>
 		<button className="reparacion" onClick={() => setVisibleInventory('Reparación')}>Reparación</button>
 	 </div>
-
-      <ul>
-        {filteredInventory.map(item => (
-          <li key={item.id}>
-            <div>
-              <img src={item.imagen} alt={`${item.tipo} - Imagen`} style={{ maxWidth: '100px', maxHeight: '100px' }} />
-            </div>
-            <div>
-				<p className="etiqueta">ID:</p>
-				<p className="valor">{item.id}</p>
-				<p className="etiqueta">Tipo:</p>
-				<p className="valor">{item.tipo}</p>
-				<p className="etiqueta">Carga:</p>
-				<p className="valor">{item.carga}%</p>
-			</div>
-          </li>
-        ))}
-      </ul>
+	  {props.user !== -1 ? (
+			<ul>
+			{filteredInventory.map(item => (
+				<li key={item.id}>
+				<div>
+					<img src={item.imagen} alt={`${item.tipo} - Imagen`} style={{ maxWidth: '100px', maxHeight: '100px' }} />
+				</div>
+				<div>
+					<p className="etiqueta">ID:</p>
+					<p className="valor">{item.id}</p>
+					<p className="etiqueta">Tipo:</p>
+					<p className="valor">{item.tipo}</p>
+					<p className="etiqueta">Carga:</p>
+					<p className="valor">{item.carga}%</p>
+				</div>
+				</li>
+			))}
+			</ul>
+	  ):(
+        <div className="ttNoLogin">
+          Inicia sesión primero
+        </div>
+        )} 
     </div>
   );
 };
