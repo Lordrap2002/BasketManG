@@ -1,6 +1,5 @@
 /* ReservaForm.css */
 .center {
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -96,5 +95,31 @@
     text-align: center;
   }
   
-  /* Añade estilos según sea necesario */
+  .mLoginRegister-button-container {
+    display: flex;
+  }
   
+  .miLoginRegister-button {
+    background-color: #e6e5ea;
+    border: 0;
+    font-size: larger;
+    font-weight: bold;
+    height: 60px;
+    width: 22%;
+    margin-right: 0%;
+  }
+  
+  .mLoginRegister-button:last-child {
+    margin-right: 0;
+  }
+  
+  .mLoginRegister-button:hover {
+    cursor: pointer;
+  }
+  
+  .mLoginRegister-button-selected {
+    background-color: white;
+    color: gray;
+  }
+  
+
