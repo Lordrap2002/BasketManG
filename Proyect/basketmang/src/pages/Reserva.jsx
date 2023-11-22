@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ErrorPopup from './ErrorPopup';  
 import './Reserva.css';
+import {connect} from "react-redux";
 
 const ReservaForm = (props) => {
   const [nombre, setNombre] = useState('');
@@ -130,6 +131,12 @@ const ReservaForm = (props) => {
   );
 };
 
-export default ReservaForm;
+const mapStatesToProps = (state) => {
+	return{
+		user: state.uiReducer.user
+	};
+}
+
+export default connect(mapStatesToProps/*, mapActionsToProps*/)(ReservaForm);
 
 

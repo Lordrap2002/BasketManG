@@ -13,7 +13,6 @@ function MHeaderBar(props){
 				setUserName(response.data[0].nombre); 
 				props.setMonedas(response.data[0].dinero);
 			});
-			//setUserName("prueba");
 	  }, [props.user]);
 	return(
 		<nav className='mHeaderBar-navbar'>
@@ -33,7 +32,7 @@ function MHeaderBar(props){
 			</div>
 			<div className='mHeaderBar-rightContainer' >
 				{props.user !== -1?
-				<MLoginButton buttonName={userName + " " + props.monedas}/>
+				<MLoginButton buttonName={userName}/>
 				:
 				<MLoginButton buttonName="LOG IN"/>
 				}

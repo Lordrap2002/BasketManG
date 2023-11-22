@@ -61,7 +61,7 @@ app.get("/usuarios/:codigo_usuario", (req, res) =>{
 app.get("/nombre_usuario/:codigo_usuario", (req, res) =>{
     let codigo_usuario = req.params.codigo_usuario;
     let values = [codigo_usuario];
-    let sql = 'SELECT * FROM "Usuarios" WHERE codigo_usuario = $1';
+    let sql = 'SELECT * FROM usuarios.administradores WHERE id = $1';
     dbClient.query(sql, values, (error, db_response) =>{
         let responseData = {}; 
         if (error){ 
@@ -78,7 +78,7 @@ app.get("/nombre_usuario/:codigo_usuario", (req, res) =>{
 app.get("/usuarios_email/:codigo_usuario", (req, res) =>{
     let codigo_usuario = req.params.codigo_usuario;
     let values = [codigo_usuario];
-    let sql = 'SELECT * FROM "Usuarios" WHERE codigo_usuario = $1';
+    let sql = 'SELECT * FROM usuarios.administradores WHERE id = $1';
     dbClient.query(sql, values, (error, db_response) =>{
         let responseData = {};
         if (error){

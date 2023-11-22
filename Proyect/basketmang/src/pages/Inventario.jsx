@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./Inventario.css";
 import MTitulo from '../components/MTitulo/MTitulo';
-
+import {connect} from "react-redux";
 
 const Inventario = (props) => {
   const inventoryData = [
@@ -60,4 +60,10 @@ const Inventario = (props) => {
   );
 };
 
-export default Inventario;
+const mapStatesToProps = (state) => {
+	return{
+		user: state.uiReducer.user
+	};
+}
+
+export default connect(mapStatesToProps/*, mapActionsToProps*/)(Inventario);
