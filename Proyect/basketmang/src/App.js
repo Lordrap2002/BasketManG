@@ -44,10 +44,10 @@ function App(props){
 				<div className='spages'>
 					<Routes>
 						<Route exact path='/' element={<MHome/>}/>
-						<Route exact path='/tienda' element={<MTienda/>}/>
+						<Route exact path='/pedidos' element={<MTienda/>}/>
 						<Route exact path='/help' element={<MHelp/>}/>
 						<Route exact path='/settings' element={<MSettings/>}/>
-						<Route exact path='/miEquipo' element={<MmiEquipo/>}/>
+						<Route exact path='/grabaciones' element={<MmiEquipo/>}/>
 						<Route exact path='/inventario' element={<MEstadisticas/>}/>
 						<Route exact path='/reserva' element={<Reserva/>}/>
 					</Routes>

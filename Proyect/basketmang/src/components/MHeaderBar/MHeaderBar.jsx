@@ -23,8 +23,8 @@ function MHeaderBar(props){
 				className='mHeaderBar-logo'
 				src='https://static.thenounproject.com/png/3776617-200.png'/>
 				<MButton buttonName="MENU PRINCIPAL" to='/'/>
-				<MButton buttonName="PEDIDOS" to= '/tienda'/>
-				<MButton buttonName="GRABACIONES" to='/miEquipo'/>
+				<MButton buttonName="PEDIDOS" to= '/pedidos'/>
+				<MButton buttonName="GRABACIONES" to='/grabaciones'/>
 				<MButton buttonName="INVENTARIO" to='/inventario'/>
 				<img 
 				alt='app-logo' 
