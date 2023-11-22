@@ -34,10 +34,25 @@
 
 .tbutton{
     border-radius: 10px;
+    box-shadow: none;
+    color: gray;
+    background-color: azure;
+    font-size: x-large;
+    font-weight: bold;
+    width: 90%;
+    height: 25%;
+    display: inline-block;
+    margin: 1%;
+    margin-bottom: 1%;
+    line-height: 100%;
+}
+
+.t1button{
+    border-radius: 10px;
     border: 0;
     box-shadow: none;
-    color: black;
-    background-color: black;
+    color: gray;
+    background-color: azure;
     font-size: x-large;
     font-weight: bold;
     text-decoration: none;
