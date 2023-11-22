@@ -2,7 +2,6 @@ import "./MTBox.css"
 import MFButton from "../MButton/MFButton";
 import axios from 'axios';
 import { useState, useEffect} from 'react';
-import {setPrecio, setShowComprar, setMonedas} from "../../store/actions/ui";
 import {connect} from "react-redux";
 
 function MTBox(props){
@@ -31,20 +30,10 @@ function MTBox(props){
   );
 }
 
-const mapActionsToProps = {
-  setShowComprar,
-  setPrecio,
-  setMonedas
-};
-
 const mapStatesToProps = (state) => {
 	return{
-		user: state.uiReducer.user,
-    precio: state.uiReducer.precio,
-    showComprar: state.uiReducer.showComprar,
-    jugador: state.uiReducer.jugador,
-    monedas: state.uiReducer.monedas,
+		user: state.uiReducer.user
 	};
 }
 
-export default connect(mapStatesToProps, mapActionsToProps)(MTBox);
+export default connect(mapStatesToProps)(MTBox);
