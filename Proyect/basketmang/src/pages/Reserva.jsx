@@ -208,7 +208,7 @@ const ReservaForm = (props) => {
       </form>
       )}
       </div>):(
-      <div className="ttNoLogin">
+      <div className="ttNoLogin2">
         Inicia sesión primero
       </div>
       )}

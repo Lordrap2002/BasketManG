@@ -52,7 +52,7 @@ const Inventario = (props) => {
 			))}
 			</ul>
 	  ):(
-        <div className="ttNoLogin">
+        <div className="ttNoLogin2">
           Inicia sesión primero
         </div>
         )} 
