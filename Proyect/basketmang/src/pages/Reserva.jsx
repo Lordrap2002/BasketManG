@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import ErrorPopup from './ErrorPopup';  
 import './Reserva.css';
 import {connect} from "react-redux";
+import axios from 'axios';
 
 const ReservaForm = (props) => {
   const [nombre, setNombre] = useState('');
   const [fecha, setFecha] = useState('');
-  const [horaInicial, setHoraFinal] = useState('');
-  const [horaFinal, setHoraInicial] = useState('');
+  const [horaInicial, setHoraInicial] = useState('');
+  const [horaFinal, setHoraFinal] = useState('');
   const [email, setEmail] = useState('');
   const [descripcion, setDescripcion] = useState('');
   const [dispositivo, setDispositivo] = useState('robot');
@@ -44,6 +45,29 @@ const ReservaForm = (props) => {
 
   }
 
+  function grabacion(){
+    var v1 = nombre;
+    var v2 = fecha;
+    var v3 = horaInicial;
+    var v5 = email;
+    var v6 = descripcion;
+    var v7 = dispositivo;
+    var text = "http://localhost:5050/grabacion/" + v1 + "/" + v2 + "/" + v3 + "/" + v5 + "/" + v6 + "/" + v7;
+    axios.get(text).then((response)=>{});
+  }
+  
+  function pedido(){
+    var v1 = nombre;
+    var v2 = fecha;
+    var v3 = horaInicial;
+    var v4 = email;
+    var v5 = dispositivo;
+    var v6 = lugarReserva;
+    var v7 = lugarFinal;
+    var text = "http://localhost:5050/pedido/" + v1 + "/" + v2 + "/" + v3 + "/" + v4 + "/" + v5 + "/" + v6 + "/" + v7;
+    axios.get(text).then((response)=>{});
+  }
+
   return (
     <div className="center">
       {/* Muestra el pop-up de error si existe */}
@@ -65,7 +89,7 @@ const ReservaForm = (props) => {
           <div className="form-group">
             <label>Nombre:</label>
             <input
-              type="text"
+              type="text" required
               value={nombre}
               onChange={(e) => setNombre(e.target.value)}
             />
@@ -73,7 +97,7 @@ const ReservaForm = (props) => {
           <div className="form-group">
             <label>Fecha:</label>
             <input
-              type="date"
+              type="date" required
               value={fecha}
               onChange={(e) => setFecha(e.target.value)}
             />
@@ -81,7 +105,7 @@ const ReservaForm = (props) => {
           <div className="form-group">
             <label>Hora Inicio:</label>
             <input
-              type="time"
+              type="time"  min="06:00" max="18:00" required
               value={horaInicial}
               onChange={(e) => setHoraInicial(e.target.value)}
             />
@@ -89,7 +113,7 @@ const ReservaForm = (props) => {
           <div className="form-group">
             <label>Hora Fin:</label>
             <input
-              type="time"
+              type="time" min="06:00" max="18:00" required
               value={horaFinal}
               onChange={(e) => setHoraFinal(e.target.value)}
             />
@@ -116,13 +140,13 @@ const ReservaForm = (props) => {
           <div className="form-group">
             <label>Email:</label>
             <input
-              type="email"
+              type="email" required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="form-group">
-            <button type="submit">Reservar</button>
+            <button type="submit" onClick={() => grabacion()}>Reservar</button>
           </div>
         </div>
       </form>
@@ -132,7 +156,7 @@ const ReservaForm = (props) => {
           <div className="form-group">
             <label>Nombre:</label>
             <input
-              type="text"
+              type="text" required
               value={nombre}
               onChange={(e) => setNombre(e.target.value)}
             />
@@ -140,7 +164,7 @@ const ReservaForm = (props) => {
           <div className="form-group">
             <label>Fecha:</label>
             <input
-              type="date"
+              type="date" required
               value={fecha}
               onChange={(e) => setFecha(e.target.value)}
             />
@@ -148,7 +172,7 @@ const ReservaForm = (props) => {
           <div className="form-group">
             <label>Hora Inicial:</label>
             <input
-              type="time"
+              type="time" min="06:00" max="18:00" required
               value={horaInicial}
               onChange={(e) => setHoraInicial(e.target.value)}
             />
@@ -156,7 +180,7 @@ const ReservaForm = (props) => {
           <div className="form-group">
             <label>Email:</label>
             <input
-              type="email"
+              type="email" required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -202,7 +226,7 @@ const ReservaForm = (props) => {
             </select>
           </div>
           <div className="form-group">
-            <button type="submit">Reservar</button>
+            <button type="submit" onClick={() => pedido()}>Reservar</button>
           </div>
         </div>
       </form>

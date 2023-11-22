@@ -175,6 +175,51 @@ app.get("/create_user/:nombre/:correo/:contra", (req, res) =>{
     }); 
 });
 
+app.get("/grabacion/:nombre/:fecha/:horaInicial/:email/:descripcion/:dispositivo", (req, res) =>{
+    var v1 = req.params.nombre;
+    var v2 = req.params.fecha;
+    var v3 = req.params.horaInicial;
+    var v4 = "grabación";
+    var v5 = req.params.email;
+    var v6 = req.params.descripcion;
+    var v7 = req.params.dispositivo;
+    let values = [v1, v2, v3, v4, v5, v7];
+    let sql = 'INSERT INTO robots_drones.reservas (id_reserva, tipo, fecha, hora, cliente, correo, dispositivo)' +
+              'VALUES (nextval(\'robots_drones.reservas_id_reserva_seq\'), $4, $2, $3, $1, $5, $6);';
+    dbClient.query(sql, values, (error, db_response) =>{
+        let responseData = {};   
+        if (error){     
+            responseData = { status: 500, message: "Error interno de la db." + error};
+        }else{
+            responseData = {status: 200, message: "El usuario se guardó correctamente en la base de datos"};   
+        }
+        res.json(responseData.message);
+    }); 
+});
+
+app.get("/pedido/:nombre/:fecha/:horaInicial/:email/:dispositivo/:lugarReserva/:lugarFinal", (req, res) =>{
+    var v1 = req.params.nombre;
+    var v2 = req.params.fecha;
+    var v3 = req.params.horaInicial;
+    var v4 = "entrega";
+    var v5 = req.params.email;
+    var v6 = req.params.dispositivo;
+    var v7 = req.params.lugarReserva;
+    var v8 = req.params.lugarFinal;
+    let values = [v1, v2, v3, v4, v5, v6, v7, v8];
+    let sql = 'INSERT INTO robots_drones.reservas (id_reserva, tipo, fecha, hora, origen, destino, cliente, correo, dispositivo)' +
+              'VALUES (nextval(\'robots_drones.reservas_id_reserva_seq\'), $4, $2, $3, $7, $8, $1, $5, $6);';
+    dbClient.query(sql, values, (error, db_response) =>{
+        let responseData = {};   
+        if (error){     
+            responseData = { status: 500, message: "Error interno de la db." + error};
+        }else{
+            responseData = {status: 200, message: "El usuario se guardó correctamente en la base de datos"};   
+        }
+        res.json(responseData.message);
+    }); 
+});
+
 app.get("/comprar_jugador/:us/:ju/:num", (req, res) =>{
     let us = req.params.us;
     let ju = req.params.ju;
